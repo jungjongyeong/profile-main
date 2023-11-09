@@ -1,0 +1,696 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title> FE Developer 정 종 영</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+.kakaoImg { float:right; width:250px; height:250px;}
+
+</style></head><body><article id="8aeefedb-3d92-4788-9fd9-2c738d75dc75" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxwcm9ncmFtbWVyfGVufDB8fHx8MTY0MzMzMzUwOA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" style="object-position:center 51.790000000000006%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💯</span></div><h1 class="page-title"> FE Developer 정 종 영</h1><p class="page-description"></p></header><div class="page-body"><img src="./img/KakaoTalk_20230416_193725194.png" class="kakaoImg"/><p id="a8eb2209-0ffd-4c50-949d-6f3970bdabe9" class="">
+</p><h2 id="6fd92690-5a25-45ff-9c5e-e02bcfe53eeb" class="">👨‍💻 Front-End Engineer, Web Developer</h2><h3 id="ee94a0f1-c464-4da6-a78e-20c01d25b78a" class=""><mark class="highlight-brown_background">천천히 계속 나아가는 성장을 좋아합니다. </mark>💪        </h3><h3 id="42750bf7-1477-4033-bf05-b4ca43ff7ea1" class=""><mark class="highlight-gray_background">함께 성장하기 위해 노력합니다.</mark> 👩‍👩‍👧‍👦</h3><h3 id="5b33e94a-abba-44c7-830f-29114298aed6" class=""><mark class="highlight-brown_background">모임의 밝은 분위기를 위해 대화를 좋아합니다.</mark> 🤗 </h3><p id="b6b21972-8f31-4a7a-a8ff-95acd9d2ca60" class="">
+</p><p id="e36db910-aee5-4bc5-8b4b-b8ec133dee48" class="block-color-blue"><mark class="highlight-brown_background"> #프론트앤드 #성장  #꾸준함  #스터디언  #협업  #긍정의힘</mark>           </p><p id="41d4f5f7-3281-4987-88b4-7347dc6b50f1" class="">
+</p><div id="833874b6-49e0-4d01-b6ed-970b91abd165" class="column-list"><div id="06766e0e-8b54-4faa-acb7-c4e82bc5065f" style="width:50%" class="column"><h2 id="f06ed46e-822e-4d1f-ada6-0da1fa25739a" class="">👦 Profile</h2><hr id="2069b75a-b9b5-4151-8166-67c14281ca41"/><p id="b96bc657-91ee-4936-9759-3f1d132a29c8" class="">👶  1994년 6월 21일 출생</p><p id="4eef6e71-64f4-4a0b-bb0a-cc4541c0b4b8" class="">🏫  함열고 졸업 (2010.03. ~ 2013.02.)</p><p id="caa8bb00-5829-443b-8670-5e0e9c47fdf1" class="">👨‍🎓  원광보건대학교 치기공과 졸업 (2013.03 ~ 2019.02.)</p><p id="3b4ca95e-b88e-48dc-a5f0-d0447de4ad73" class="">🇰🇷  육군 병장 전역 (2014.09 ~ 2016.06.) </p><p id="57645b81-74a7-44c4-adff-b0ea1bd4d0bc" class="">💼  신입 프론트앤드 근무 (2023.06 ~ 2023.11.)</p><p id="9547580e-d217-48d7-aab5-b8f42b582987" class="">
+</p></div><div id="15be5ab3-0919-42e2-9216-60a1d2b61b1b" style="width:50.000000000000014%" class="column"><h2 id="5bad5f12-6fba-4f73-8f57-548c6b478e1c" class="">💡 Contact</h2><hr id="1a0483ea-9cca-4f38-b467-049b080de342"/><p id="e3eb8543-e929-473c-93ab-9d62ee7eda71" class="">📭  asde621@naver.com </p><p id="c2c7f829-1f29-4792-8817-25c14028ecfc" class="">📞  010-7733-4397</p><p id="4eefd755-d22d-4110-a1fc-ad6f73c40817" class="">
+</p><p id="6712f083-4ccb-49bd-b3d8-edb59c4b6ac4" class="">
+</p></div></div><h2 id="112671a9-6933-451f-8622-a0fabe09ea46" class="">📖 Education</h2><hr id="9f091e29-fcb4-489c-a351-e9bbbc09c63e"/><ul id="876a5175-90b1-43a2-82df-38e5fd829af0" class="bulleted-list"><li style="list-style-type:disc">요식업( 레스토랑 ) <mark class="highlight-orange_background">인터넷 주문 (배달의민족, 요기요) 관리업무</mark>, 및 주방업무 ( 2019.07. ~ 2022.02.01 )</li></ul><ul id="94188b38-0619-45a7-8e89-2f42aea6fae3" class="bulleted-list"><li style="list-style-type:disc">리베하얀 <mark class="highlight-orange_background">웹 퍼블리셔</mark> class101 강의 수강 ( 2021.10.01 ~ 2022.02.01 )</li></ul><ul id="4a740f1a-14f1-49da-a87c-03e2ae906a38" class="bulleted-list"><li style="list-style-type:disc">한큐의 자바 class101 (<mark class="highlight-orange_background">풀스텍</mark>) 강의 수강 ( 2022.02.01 ~ 2022.10.01 )</li></ul><ul id="ff5c5459-ea74-4e44-bbf5-e50333bb2a1f" class="bulleted-list"><li style="list-style-type:disc">강남 그린 it아카데미 <mark class="highlight-orange_background">프론트앤드 과정</mark> 수강중 ( 2022.12.30 ~  2023.06.01 )</li></ul><ul id="f050fe3d-d79b-4272-838a-aa675c4bb9cb" class="bulleted-list"><li style="list-style-type:disc">이이테크 <mark class="highlight-orange_background">프론트앤드</mark> 근무( 2023.06.19 ~ 2023.11.10 )</li></ul><p id="068b4d4e-e29f-4b86-a19b-4af9a5bb4432" class="">
+</p><p id="490a548d-f2e4-4b7b-b865-b1540d9e81ea" class="">
+</p><p id="1359193e-3110-4ee8-87a2-d5a55f72d2f6" class="">
+</p><div id="95367fa0-6572-40ef-bafe-68eef1a50c50" class="column-list"><div id="9689171c-b1fe-4fa7-95f6-8ab959cbefa4" style="width:33.33333333333333%" class="column"><h2 id="2f86e68e-7d44-41d2-a067-8ea9f03ad9b5" class="">📝 Blog</h2><hr id="1b43df15-7c02-432c-b6df-0cdea0f81fda"/><p id="6c8f5d63-6f4c-4dc3-91ab-eeef363b5e16" class=""><a href="https://blog.naver.com/asde621">https://blog.naver.com/asde621</a></p><p id="3ab6cef7-ec03-40ca-9905-6c0d9fb0b162" class="">
+</p><p id="74073b58-4f69-4b8b-96d4-55adbcd4930d" class="">
+</p></div><div id="d4e2c399-cdb0-4330-a497-c1788c89f413" style="width:33.33333333333334%" class="column"><h2 id="6c564739-02ff-4895-b129-01d114345ca1" class="">🗃 Github</h2><hr id="3f3af26c-a6c0-44dd-85ff-c225fbba87ef"/><p id="317fecae-ea1c-476c-a6f5-c9dc15bf5c21" class=""><a href="https://github.com/jungjongyeong">https://github.com/jungjongyeong</a></p></div><div id="51684542-31f1-4801-afda-0ebaf5676eae" style="width:33.33333333333333%" class="column"><h2 id="88dc851c-ef21-4fce-a626-20c55b6ea080" class="">📑 Portfolio</h2><hr id="6f5b4a70-4f02-41f4-b2bc-6d60e762a5c4"/><p id="42a9336f-2583-4b7f-9acd-e75dc666f16b" class=""><a href="https://storied-stardust-46d225.netlify.app/">https://storied-stardust-46d225.netlify.app/</a></p><p id="3b97158f-18ca-4ff9-acef-3f32430f31d2" class="">
+</p></div></div><p id="cbef1540-532b-4e21-ae4c-454ae89f8bf2" class="">
+</p><h2 id="aa3fe5d2-7471-4f95-be1b-648b49fcc37f" class="">🛠 Skills</h2><div id="0ab39aa7-ad18-47c1-a138-5d89e79d7013" class="column-list"><div id="ffdb68f6-fbf9-4dd2-8e73-c3d8557b8ed3" style="width:50%" class="column"><p id="0879a6ef-d044-436e-addd-ee14c4884448" class="block-color-red_background"><mark class="highlight-red_background">업무에도 활용해요.</mark></p><ul id="9bad70af-80c4-4832-bbf1-7e416b34e68f" class="bulleted-list"><li style="list-style-type:disc">HTML</li></ul><ul id="3d2a463e-8224-45ca-9abc-bafe18a6cc45" class="bulleted-list"><li style="list-style-type:disc">CSS</li></ul><ul id="1d36621a-71ad-4c01-be6a-d2ab83d8d11a" class="bulleted-list"><li style="list-style-type:disc"> JS</li></ul><ul id="2cb9a1c9-b760-440f-be27-0ddab845a59f" class="bulleted-list"><li style="list-style-type:disc"> JQuery</li></ul><ul id="a8bd664d-f355-446a-9d31-739f7b79abed" class="bulleted-list"><li style="list-style-type:disc"> React.js</li></ul><ul id="0aaeee42-4736-4520-b390-31681f095b36" class="bulleted-list"><li style="list-style-type:disc"> PHP</li></ul><p id="3abeb1cd-9bdf-4677-a9cc-fbed77a71b04" class="">
+</p></div><div id="d011a9ed-b5b8-4d35-891a-e1111483ca85" style="width:50%" class="column"><p id="569ec7b9-994c-4a92-99cc-fde797b68c76" class="block-color-blue_background">어느 정도 사용할 줄 알아요.</p><ul id="bb1c892e-3bea-46f8-b8b9-012e0bc0debb" class="bulleted-list"><li style="list-style-type:disc">JAVA</li></ul><ul id="5591b104-4d54-4e0e-9262-fe47960f0fa1" class="bulleted-list"><li style="list-style-type:disc">JSP</li></ul><ul id="37d26cd0-212b-495b-88a6-170d887a01b6" class="bulleted-list"><li style="list-style-type:disc">Redux-toolkit</li></ul><ul id="1252fd3d-a6f7-45ec-a5c1-1718f5df3f2b" class="bulleted-list"><li style="list-style-type:disc">Maria DB</li></ul><ul id="cc7b7ce7-f1e7-473f-b341-3f113539964b" class="bulleted-list"><li style="list-style-type:disc">Git</li></ul><ul id="d821e876-369d-4b6b-b257-6a976c3f2967" class="bulleted-list"><li style="list-style-type:disc">Slack</li></ul><ul id="ef0d20c2-3ece-4357-bda0-c300a521088d" class="bulleted-list"><li style="list-style-type:disc">SQL</li></ul><p id="284e76fc-9994-4980-84d8-f4d74080d445" class="">
+</p><p id="c3d7e7d4-e0ff-4967-9f09-fc318ae7b09b" class="">
+</p></div></div><p id="a3c2e88f-8fd3-40f9-a047-753dcdf2ca7a" class="">
+</p><p id="891c8150-a8d5-4ea7-9be6-2772eb346f6f" class="">
+</p><h1 id="8f6bb7b2-5555-4b6a-8ff8-c86133ec1662" class="">😄 감사합니다.</h1></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
