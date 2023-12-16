@@ -1,0 +1,10 @@
+@media screen and (max-width: 1024px){
+ .menubackground { position: static; display: none; } 
+ .port > div > h2 { padding:0 0 50px; width:70%; float:right}
+ .port { float:none; width:100%;}
+.line.b2 { display: none; } 
+.contact .address { margin:0;}
+.contact > div { padding:0;}
+.right .port > div > .color { display: none;}
+.right .contact > div > .color { display: none;}
+ }

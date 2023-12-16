@@ -1,0 +1,55 @@
+@charset "utf-8"; @media screen and (max-width:1240px) { /* .articleModal { float: none; position: static; width: 100%; height: 50%; color: #fff; } 
+ .articleModal::before { position: static; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; background: #000; content: ""; opacity: 0.6; } 
+ */ .weather { position:absolute; left:50%; transform: translate(-50%); bottom:0; width:100%; height: 45%; padding:30px 50px 0; color:#fff; } 
+ .weather h1 { display: block; padding: 0 50px 20px; border-bottom: 2px solid #fff; } 
+ .weather::before { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; background: #000; content: ""; opacity: 0.6; z-index: -1; } 
+ .weather > div { line-height: 70px; padding: 0 50px; } 
+ .CITY_description { text-align: center; top: 29px; left: 0; width: 200px; } 
+ .CITY_description .current_temp { font-size: 35px; } 
+ .CITY_description .city { font-size: 35px; } 
+ .swiper-container { width:220px; height:200px; } 
+ .swiper-slide { width:220px; height:200px; text-align:center; display:flex; align-items:center; justify-content:center; border-radius:5px; box-shadow:0 0 10px silver inset; box-sizing:border-box; } 
+ #data1 { color:#000; } 
+ .back_home { position:fixed; top: 5%; right:5%; width:40px; height:40px; z-index: 999999999999999999; } 
+
+ #cover { display: none; position: absolute; top: 62%;
+ left: 50% !important; transform: translateX(-50%); width: 288px; padding: 20px; margin: -83px auto 0 auto; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 10px 40px #b0c4de, 0 0 0 20px #ffffffeb; } 
+#cover.on { top: 16%; } 
+#data1[type="text"] { width: 100%; height: 36px; font-size: 20px; border: none; line-height: 2; color: #fff; } 
+.textAni { font-size:20px; } 
+.text_box { position: absolute; top: 50%; transform: translateY(-50%); left: 8%; color: #fff; font-size: 20px; text-align: center; } 
+.search_form { height: 27px; z-index: 100; } 
+.search_btn { display: block; position: relative; width: 40px; height: 40px; cursor: pointer; } 
+.search_btn i { display: block; position: absolute; right:0; top:5px; font-size:30px; } 
+.leftright { position:relative; animation:leftright2 20s infinite linear; } 
+@keyframes leftright2 { 
+ 0% { transform:translateX(0); } 
+100% { transform:translateX(1240px); } 
+ }
+}
+ @media screen and (max-width:500px){
+ .weather { position:absolute; left:50%; transform: translate(-50%); bottom:0; width:100%; height: 45%; padding:30px 50px 0; color:#fff; } 
+ 
+ .CITY_description { text-align: center; top: 29px; left: 0; width: 100px; } 
+ .CITY_description .current_temp { font-size: 20px; } 
+ .CITY_description .city { font-size: 20px; } 
+
+ .weather > div { line-height: 65px; padding: 0 5px; } 
+ .weather h1 { display: block; padding: 0 0 20px;; border-bottom: 2px solid #fff; } 
+ .Modal_page { top:19%; } 
+ .modal .imgbox button { position: absolute; bottom: 0; /* top: 0; */
+ left: 50%; padding: 5px 10px; color: #fff; background: #000; transform: translateX(-50%); width:30%; } 
+ .leftright { position:relative; animation:leftright3 10s infinite linear; } 
+ @keyframes leftright3 { 
+  0% { transform:translateX(0); } 
+ 100% { transform:translateX(700px); } 
+  }
+ }
+ @media screen and (max-height:700px){
+ .slide_span { display: none; } 
+ .swiper-container { height:100px; } 
+ #cover { display: none; position: absolute; top: 62%; /* right: 0; */
+  left: 50%; transform: translateX(-50%); width: 208px; padding: 10px; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 0px 0px #b0c4de, 0 0 0 4px #ffffffeb; } 
+  #cover.on { top: 20%; } 
+
+ }

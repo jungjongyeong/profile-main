@@ -1,0 +1,17 @@
+html { font-size: 20px;}
+body { font-size: 1rem;}
+header h1 { text-align: center; font-size:.75rem; color:#000000; padding:.7rem 0 0;}
+.head_top .align_justify { display: flex; justify-content: space-between; }
+.head_back { background:url(../images/ico_back.png) no-repeat center / .883rem auto; width:2.23rem; height:2.65rem; }
+.head_search { background:url(../images/ico_search.png) no-repeat center / .883rem auto; width:2.65rem; height:2.05rem;  padding:1.5rem 0 0;}
+.head_menu { background:url(../images/ico_menu.png) no-repeat center / 1rem auto; width:2.866rem; height:2.03rem; padding:1.5rem 0 0; }
+.main_top { line-height:2.383rem ; background:#287BB2;}
+.main_top ul { display: flex;}
+.main_top li { flex:1; padding:0 .566rem;}
+.main_top li button { width:5.65rem; height:1.933rem; border-radius: .5rem .5rem 0 0; color:#fff; background:none; }
+.main_top2 { line-height:2.383rem ; background:#FAFAFA;}
+.main_top2 ul { display: flex; padding:0 .566rem;}
+.main_top2 li { flex:1;}
+.main_top2 li button { width:5.65rem; height:1.933rem; font-size:.666rem; color:#333333; background:none;}
+.main_top li.active button { color:#287BB2; background:#FAFAFA; transform: translateY(5%);}
+.main_top2 li.active button { color:#287BB2; border-bottom:1px solid #287BB2}

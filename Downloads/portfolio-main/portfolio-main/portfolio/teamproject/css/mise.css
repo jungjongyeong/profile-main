@@ -1,0 +1,240 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	background-color: #fff;
+	overflow: hidden;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+
+.wrapper h1 {
+	color: #000;
+	text-align: center;
+	margin-top: 5%;
+	font-size: 35px;
+	font-weight: bold;
+}
+.main {
+	display: flex;
+	position: relative;
+	flex: 2;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.imt {
+	position: absolute;
+	left: -3%;
+	top: 10%;
+	max-width: 100%;
+}
+.imt img {
+	width: 45%;
+}
+
+.chart-container {
+	width: 60%;
+	height: 120%;
+	margin: 7% 0 0 -3%;
+	left: -100px;
+	opacity: 0;
+    animation: slide-in 3s ease-in-out 1s forwards;
+}
+
+@keyframes slide-in {
+	0% {
+	  transform: translateX(100px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	  left: 0;
+	}
+  }
+
+
+#list {
+	margin: 0 auto;
+}
+
+.main .top {
+	margin-top: 10%;
+	margin-left: 8%;
+	width: 90%;
+	height: 90%;
+	background: url(../img/웹창.png) no-repeat;
+	background-size: cover;
+	padding: 30px 20px;
+	overflow: hidden;
+	border-radius: 20px;
+	box-shadow: 5px 9px 4px 4px #ccc;
+	right: -100px;
+	opacity: 0;
+    animation: slide-in 3s ease-in-out 1s forwards;
+}
+
+
+@keyframes slide-in {
+	0% {
+	  transform: translateX(-100px);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	  right: 0;
+	}
+  }
+
+
+.main .top > img {
+	width: 200px;
+	height: 200px;
+	margin-left: -3%;
+	margin-top: 10%;
+}
+
+.top img:hover {
+	animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translateX(-5px) rotate(-2deg);
+	}
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translateX(5px) rotate(1deg);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.inform {
+	margin-left: 10%;
+	margin-top: 2%;
+	padding-bottom: 18px;
+	text-align: center;
+}
+.inform > div {
+	max-width: 368px;
+	text-align: left;
+	line-height: 27px;
+}
+.inform img,
+.inform p {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 2%;
+	font-family: sans-serif;
+}
+
+.inform img {
+	width: 7%;
+	height: 7%;
+}
+
+.inform p {
+	text-align: left;
+	margin-left: 2%;
+	font-size: 15px;
+}
+
+@media screen and (max-width: 900px) {
+	body {
+		border: none;
+	}
+
+	#list {
+		max-width: 100% !important;
+		height: 30vh !important;
+		margin: 0 auto !important;
+	}
+
+	h1 {
+		margin-top: 20%;
+		font-size: 2px;
+	}
+	.main {
+		display: block;
+	}
+
+	.imt {
+		position: absolute;
+		left: 3%;
+		top: -3%;
+	}
+	.imt img {
+		width: 40%;
+		max-width: 100%;
+	}
+
+	.chart-container {
+		margin-left: 20%;
+		margin-top: 10%;
+		max-width: 100%;
+	}
+	.top {
+		width: 100% !important;
+	}
+	.inform > div {
+		text-align: center;
+		line-height: 17px;
+	}
+	.main .top > img {
+		width: 50%;
+		height: 55%;
+		margin-left: -15%;
+		margin-top: 0%;
+		max-width: 100%;
+	}
+	.main .top {
+		margin-top: 8%;
+		padding: 30px 30px;
+		width: 15%;
+		height: 20%;
+		background: none;
+		box-shadow: none;
+	}
+
+	.inform {
+		position: relative;
+		margin-left: auto;
+		text-align: left;
+		padding-left: 0;
+		padding-bottom: 30px;
+	}
+
+	.inform img {
+		width: 6%;
+		height: 6%;
+	}
+
+	.inform p {
+		width: 235px;
+		color: #000;
+		font-size: 12px;
+		text-align: left;
+		margin-left: 3%;
+	}
+
+	
+}

@@ -1,0 +1,89 @@
+.special { padding: 0 .55rem 1.566rem; background:#287BB2;}
+.special h2 { padding: 1.283rem 0 .716rem; color:#fff; font-size:.783rem;text-align: center; font-weight: normal;}
+.special ul { display: flex; line-height: 1;}
+.special ul li { flex:1;}
+.special ul li ~ li { margin: 0 0 0 .666rem;}
+.special ul li a { display: block; height: 9.4rem; background: #fff;}
+.special ul li span { font-size: .633rem; color:#666F76;}
+.special ul li strong { display: block; padding:.1rem 0 .3rem; font-size: .85rem; color:#333; font-weight: normal;}
+.special ul li em { font-size: .633rem; color:#9EA8A7;}
+.special ul li b { display: block; padding:.3rem 0; font-size: 1.316rem; color:#239DEE;}
+.special ul li i,
+.special ul li div { font-size: .566rem; color:#333;}
+.special ul li div { padding: .3rem 0 0;}
+
+.service { padding: 1.4rem .55rem 1.666rem; background: #F6F6F6;}
+.service ul {display: flex; flex-wrap: wrap;}
+.service ul li { width: calc(33.333% - 0.266rem); margin: 0 .266rem .266rem 0;line-height: 1;}
+.service ul li a { display: block; height: 4.233rem; background: #fff; border: 1px solid #E3E7E8; box-sizing:border-box; font-weight: bold; color:#0A2725; font-size: .7rem; letter-spacing: -1px;}
+
+.service .link { padding: 1rem 0 0; text-align: center;}
+.service .link a { font-size: .666rem;}
+.service .link a:before { content: ""; display: inline-block; margin: 0 .275rem 0 0; width: 1.05rem; height: 1.05rem; background:no-repeat left / auto .983rem; vertical-align: -0.2rem;}
+.service .link span {display: inline-block; width:1px; height: .616rem; margin: 0 1.333rem; background:#D4D8D9;}
+.service .link .link1 { color: #33ACA1;}
+.service .link .link1:before { background-image: url(../images/ico_search2.png);}
+.service .link .link2 { color: #4394CB;}
+.service .link .link2:before { background-image: url(../images/ico_event.png);}
+
+
+.product_nav a { display: block; height: 4.6rem; background:no-repeat right .95rem bottom 1.133rem / 1.683rem auto; font-size: .666rem; color:#fff;}
+.product_nav a p { padding: .2rem 0 0; font-size: .55rem; color:#B6C4CF;}
+.product_nav a.bg1 { background-image: url(../images/ico_cart.png); background-color: #475E70;}
+.product_nav a.bg2 { background-image: url(../images/ico_hirobot.png); background-color: #556B79;}
+.product_nav a.bg3 { background-image: url(../images/ico_wallet.png); background-color: #239DEE;}
+.product_nav a.bg3 p { color:#fff;}
+
+.mycash { padding: 2rem .55rem 0; line-height: 4.3rem;}
+.mycash .tit { font-size: .75rem; color:#333;}
+.mycash .cash { font-size: 1.083rem; color:#333;}
+.mycash .cash em { font-size: .916rem;}
+.mycash input + label { display: inline-block; position: relative; width: 3.766rem; height: 1.25rem; background: rgba(40, 123, 178, .3); border-radius: 1.25rem;}
+.mycash input + label:before { content: "OFF"; position: absolute; right:.45rem; top: 50%; transform: translateY(-50%); font-size:.666rem; color: #fff;}
+.mycash input + label:after { content: "잔액"; position: absolute; left:0; top: 50%; transform: translateY(-50%); width:1.85rem; height: 1.25rem; border-radius: 1.25rem; background: #287BB2; font-size: .666rem; color: #fff; text-align: center; line-height: 1.25rem;}
+
+.mycash input:checked + label:before { content: "ON"; right:inherit; left:.45rem;}
+.mycash input:checked + label:after { left:inherit; right:2rem;}
+
+.cash_wrap { padding:.9rem .55rem; background:#EFEFEF;}
+.sort_list { display: flex; justify-content: flex-end; line-height: 1;}
+.sort_list li { position: relative; padding: 0 0 0 .966rem; line-height: .583rem;}
+.sort_list li ~ li:after { content: ""; position: absolute; left:.525rem; top: 50%; transform: translateY(-50%); width: 1px; height: .483rem; background:#707070;}
+.sort_list li button { height: .866rem; font-size:.583rem; color:#333; background: none;}
+
+.cash_list { padding: .433rem 0 0;}
+.cash_list li {  position: relative; margin: 0 0 .5rem; padding:.5rem .45rem;height: 7.56rem; border-radius: .15rem; border-left: .283rem solid #239DEE; background: #fff; box-sizing:border-box; color:#333;}
+.cash_list li.red { border-left-color: #FF653F;}
+.cash_list li > span { font-size: .666rem;}
+.cash_list li > p { font-size: .833rem;}
+.cash_list li > i { display: inline-block; padding: 0 .55rem; line-height: 1rem; border-radius: 1rem; font-size: .5rem; color:#FF653F; border: 1px solid #D0D3D6;}
+.cash_list li .count { position: absolute; right: .733rem; bottom: 3.016rem; font-size: 1.083rem;}
+.cash_list li .count span { font-size: .916rem;}
+.cash_list li .link { position: absolute; left:.733rem; bottom: 1rem;}
+.cash_list li .link a { display: inline-block; width:3.3rem; line-height: 1.433rem; text-align: center; border: 1px solid #239DEE; font-size: .583rem; color:#239DEE; border-radius: 1.433rem;}
+.cash_list li .button { position: absolute; right:.733rem; bottom: 1rem;}
+.cash_list li .button button { width: 3.8rem; border:1px solid #D0D3D6; border-radius: 1.433rem; font-size: .583rem; line-height: 1.433rem; background:url(../images/bu_arrow_down.png) no-repeat right .516rem center / .283rem auto; text-align: left; text-indent: .583rem;}
+
+.information { margin: .6666rem 0 0; padding:.55rem; background: #FAFAFA; border-radius: .15rem;}
+.information h2 { padding: 0 0 .357rem .65rem; background: url(../images/ico_info.png) no-repeat 0 .2rem / .558rem auto; font-size: .583rem; color:#333; font-weight: normal;}
+.information li { position: relative; padding: 0 0 .2rem .558rem; font-size: .583rem; line-height: .666rem; color:#333;}
+.information li:after { content: ""; position: absolute; left: .2rem; top: .25rem; width: .1rem; height: .1rem; border-radius: 100%; background: #333;}
+
+.bar_box { position: relative; padding: 1.133rem .666rem .45rem;}
+.bar_box:after { content: ""; position:absolute; left: .666rem; top: .766rem; width: 1.433rem; height: .133rem; border-radius: .133rem;}
+.bar_box.blue:after { background:#239DEE;}
+.bar_box.orange:after { background:#FF9700;}
+.bar_box.green:after { background:#28B2A5;}
+.bar_box.red:after { background:#F25872;}
+.bar_box.tomato:after { background:#FF653F;}
+.bar_box.darkblue:after { background:#2857B3;}
+.bar_box.lightblue:after { background:#3598DB;}
+.bar_box.white:after { background:#fff;}
+
+
+
+
+
+
+
+/*  */

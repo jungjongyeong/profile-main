@@ -1,0 +1,21 @@
+@media screen and (max-width: 1024px) {
+  #section #map .outTitle {
+    opacity: 1;
+    white-space: nowrap;
+  }
+  #section #contBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(90deg);
+    width: 70%;
+    height: 80%;
+    transition: all 0.3s;
+  }
+  #section #contBox #close {
+    display: flex;
+  }
+  #section #contBox.seoul, #section #contBox.busan, #section #contBox.gangwon, #section #contBox.daejeon, #section #contBox.gwangju, #section #contBox.jeju {
+    transform: translate(-50%, -50%) rotateY(0deg);
+  }
+}/*# sourceMappingURL=travelrwd.css.map */

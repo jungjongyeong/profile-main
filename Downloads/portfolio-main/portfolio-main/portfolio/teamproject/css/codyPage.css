@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+body {
+    text-align: center;
+    background: url(../img/clothes/bg/bg.png) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.title {
+    height: 20%;
+}
+
+.contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wardrobe {
+    position: relative;
+    width: 220px;
+    height: 270px;
+    background-color: #5c3b11;
+    border: 10px solid #b0712d;
+    box-shadow: inset -5px 5px 25px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    cursor: pointer;
+}
+
+.wardrobe:hover .door {
+    transform: rotateY(-160deg);
+}
+
+.wardrobe:hover .door:before {
+    display: none;
+}
+
+.wardrobe:hover .second-door {
+    transform: rotateY(160deg);
+}
+
+.wardrobe:hover .second-door:before {
+    display: none;
+}
+
+.wardrobe:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    left: 0;
+    background-color: #8a5924;
+    top: 260px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 180px 0 #8a5924;
+}
+
+.wardrobe:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 220px;
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid #8a5924;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    top: -25px;
+    left: -15px;
+}
+
+.insite {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rail {
+    position: absolute;
+    width: 200px;
+    height: 8px;
+    background-color: #d3cfc7;
+    top: 65px;
+    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.3), 0 -20px #8a5924, 0 135px #8a5924;
+}
+
+.rail:before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #8cbf49;
+    top: -30px;
+    left: 35px;
+    box-shadow: 5px -10px white, 90px 0 #2a85ad, 90px -10px #e96c1a, 90px -20px #d095c0;
+}
+
+.rail:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: #97a4ad;
+    box-shadow: inset 0 10px rgba(0, 0, 0, 0.3);
+    top: 155px;
+    left: 3px;
+}
+
+.front {
+    position: relative;
+    z-index: 1;
+}
+
+.door,
+.second-door {
+    position: absolute;
+    width: 100px;
+    height: 250px;
+    background-color: #8a5924;
+    top: 0;
+    transition: .5s;
+    z-index: 5;
+}
+
+.door {
+    transform-origin: left;
+    box-shadow: inset 1px 0 10px rgba(0, 0, 0, 0.3);
+    left: 0;
+}
+
+.door:before,
+.second-door:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    top: 115px;
+}
+
+.door:before {
+    left: 85px;
+}
+
+.second-door {
+    left: 100px;
+    transform-origin: right;
+    box-shadow: inset 1px 0 rgba(0, 0, 0, 0.3), inset -1px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.second-door:before {
+    left: 10px;
+}
+
+.shadow {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 220px;
+    height: 30px;
+    border-radius: 50%;
+    top: 260px;
+    left: -10px;
+    z-index: -1;
+}
+
+.boots,
+.boots:after {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    border-radius: 0 30px 0 0;
+}
+
+.boots {
+    box-shadow: inset 0 -5px #d3d3d3;
+    left: 140px;
+    background-color: black;
+    top: 225px;
+}
+
+.boots:after {
+    content: "";
+    left: -25px;
+    background-color: #161a1d;
+    box-shadow: inset 0 -5px white;
+}
+
+.boots:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #161a1d;
+    top: -10px;
+    left: -25px;
+    box-shadow: 25px 0 black;
+}
+
+.hangers {
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    border-radius: 5px 5px 0 0;
+    background-color: #6c757d;
+    top: 62px;
+    left: 20px;
+    box-shadow: 15px 0 #6c757d, 35px 0 #6c757d, 55px 0 #6c757d, 80px 0 #6c757d, 95px 0 #6c757d;
+}
+
+.hangers:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 100px;
+    background-color: #d6b109;
+    top: 20px;
+    left: -6px;
+    border-radius: 30% 30% 5px 5px;
+    box-shadow: 15px 0 #60a6ab, 15px 10px #60a6ab, 35px 0 #80579b, 55px 0 #7ba53a, 55px 15px #d795c1, 80px 0 #cc0e2d, 95px 0 #fffaff;
+}
+
+.scarf {
+    position: absolute;
+    width: 25px;
+    height: 60px;
+    background-color: #a4161a;
+    top: 73px;
+    left: 160px;
+}
+
+.scarf:before {
+    content: "";
+    position: absolute;
+    background-color: #ba181b;
+    width: 25px;
+    height: 90px;
+    top: -11px;
+    left: -10px;
+    border-radius: 3px 3px 0 0;
+}
+
+.scarf:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    background-color: #ba181b;
+    top: 77px;
+    left: -8px;
+    box-shadow: 5px 0 #ba181b, 10px 0 #ba181b, 15px 0 #ba181b, 20px 0 #ba181b, 26px -19px #a4161a, 31px -19px #a4161a;
+}
+
+.inside:before {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 30px;
+    background-color: #738d51;
+    box-shadow: inset 0 10px rgba(0, 0, 0, 0.3);
+    left: 135px;
+    top: 170px;
+}
+
+.stats {
+    width: 60%;
+    padding-bottom: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.stats > h3 {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 30px auto;
+    background: #772FDD;
+    width: 70%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0 5px 0 5px;
+}
+
+.stats > ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.stats > ul li {
+    flex: 0 1 45%;
+    margin: 15px 10px;
+    border-radius: 5px;
+    background: #Fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    border-radius: 0 5px 0 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.stats>ul li .text {
+    margin: 10px 0 5px 0;
+    padding: 5px 0;
+    width: 50%;
+    text-align: center;
+    background: #772FDD;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.stats>ul li .clothes {
+    height: 5vw;
+}
+
+.stats>ul li .clothes img {
+    height: 100%;
+}
+

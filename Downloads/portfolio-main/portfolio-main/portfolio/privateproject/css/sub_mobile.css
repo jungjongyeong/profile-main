@@ -1,0 +1,26 @@
+.product_type1 { padding: 0 1rem;}
+.product_type1 > img { float: none; width: 100%;}
+.product_type1 .right { float: none; width:100%;}
+.product_type1 .right h3 { padding:2.15rem 0 1.65rem;}
+.product_type1 .right p { line-height: 1.25rem;}
+
+.form_type { padding: 0 1rem;}
+.txt_top { padding:  2.65rem 0 2.7rem;}
+.txt_top .txt2 { padding: 0 0 2.25rem; line-height: 2.25rem;}
+.txt_list li { line-height: 1.5rem;}
+.form_wrap h4 { padding:.3rem 0 1rem;}
+.radio_list { padding: 0 0 2.2rem;}
+.form_txt { padding:0 0 1.5rem;}
+.form_txt textarea,
+.form_txt input { width: 100% !important;}
+
+.form_txt #txt1_3 { width: calc(100% - 5rem) !important;}
+.radio_list > li { float:none; width:100%; line-height: 1.8rem;}
+.form_txt.label_static label { position:static; line-height: 1; padding: 0; transform: none;}
+.form_list_col2 > li .form_txt { display: block;}
+.form_list_col2 > li { float:none; width:100%; padding: 0;}
+.form_list_col2 > li input { width: 100% !important;}
+.form_txt + span { display: block; position: relative; z-index: 2; margin:-1rem 0 1rem; }
+
+
+/*  */

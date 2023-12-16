@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="js/jquery.fullpage.js"></script>
+    <script src="js/contents.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rwdStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>PORTFOLIO</title>
+</head>
+
+<body>
+    <style>
+        @keyframes centxt {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <main>
+        <div class="menubackground">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#section3" data-menuanchor="section3">PORTFOLIO </a></li>
+                    <li><a href="#section4" data-menuanchor="section4">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <div class="section box3">
+                <div class="port">
+                    <div class="number"><span></span></div>
+                    <div class="clear">
+                        <div class="color a2"><span class="hide">색깔 사각형</span></div>
+                        <h2>Portfolio</h2>
+                        <div class="line b2">
+                            <span class="hide">선</span>
+                        </div>
+                        <ul class="prt_main clear">
+
+                            <li class="prt_private">
+                                <small class="prt_span"><span></span><i class="tech react_i"
+                                        style="color:#61dbfb; font-weight: bold; font-size:14px; padding: 0 5px 0 0; background-color: #000;"><i
+                                            class="fa-brands fa-react"></i>React Personal Project</i></small>
+                                <a href="./portfolio/privateproject/pagination.html">
+                                    <div class="screen anipri">
+
+                                        <div class="left">만국 여행사 프로젝트.</div>
+                                        <div class="back"></div>
+                                        <div class="top">만국 여행사 프로젝트</div>
+                                        <div class="righttxt">#React #Js #Personal Project</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prt_team aniteamLi">
+                                <small class="prt_span teamspan"
+                                    style="background-color: gray; font-weight: bold; font-size:14px; color:#fff"><span></span>Team
+                                    Project</small>
+                                <a href="./portfolio/teamproject/pagination.html">
+                                    <div class="screen aniteam">
+                                        <div class="left">오늘 여행 어디로?</div>
+                                        <div class="back"></div>
+                                        <div class="top">한국 여행 데이터 사이트</div>
+                                        <div class="righttxt">#Javascript #Team Project</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prt_1 publishing bitoz">
+                                <small class="prt_span teamspan"
+                                    style="background-color: #49bced; font-weight: bold; font-size:14px; color:#fff"><span></span>Business</small>
+                                <a href="https://bitoz.com/">
+                                    <div class="screen ani4">
+                                        <div class="left">비토즈 (비트코인)</div>
+                                        <div class="back"></div>
+                                        <div class="top">비토즈 (비트코인)</div>
+                                        <div class="righttxt">#responsive #PHP #JS </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prt_1 publishing">
+                                <small class="prt_span teamspan"
+                                    style="background-color: #49bced; font-weight: bold; font-size:14px; color:#fff"><span></span>Business</small>
+                                <a href="http://modoocombine.com/">
+                                    <div class="screen ani6">
+                                        <div class="left">모두 컴바인</div>
+                                        <div class="back"></div>
+                                        <div class="top">모두 컴바인</div>
+                                        <div class="righttxt"> #PHP #JS </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prt_1 publishing">
+                                <small class="prt_span teamspan"
+                                    style="background-color: #000; font-weight: bold; font-size:14px; color:#fff"><span></span>Publishing</small>
+                                <a href="./portfolio/pt1/pagination.html">
+                                    <div class="screen ani1">
+                                        <div class="left">글로벌 오리엔탈</div>
+                                        <div class="back"></div>
+                                        <div class="top">글로벌 오리엔탈</div>
+                                        <div class="righttxt">#responsive #HTML #CSS </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prt_2">
+                                <a href="./portfolio/pt3/pagination4.html">
+                                    <div class="screen ani2">
+                                        <div class="left">NC 문화재</div>
+                                        <div class="back"></div>
+                                        <div class="top">NC 문화재</div>
+                                        <div class="righttxt">#responsive #HTML #CSS </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prt_3">
+                                <a href="./portfolio/pt4/pagination3.html" class="screenimg">
+                                    <div class="screen ani3">
+                                        <div class="left">삼성선물</div>
+                                        <div class="back"></div>
+                                        <div class="top ani">삼성선물</div>
+                                        <div class="righttxt">#HTML #CSS </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prt_5">
+                                <a href="./portfolio/pt2/pagination2.html">
+                                    <div class="screen ani5">
+                                        <div class="left">금융권 Moblie</div>
+                                        <div class="back"></div>
+                                        <div class="top">금융권 Moblie</div>
+                                        <div class="righttxt">#responsive #HTML #CSS </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="contact">
+                    <div class="number"><span></span></div>
+                    <div>
+                        <div class="color a3"><span class="hide">색깔 사각형</span></div>
+                        <h2>Contact</h2>
+                        <div class="line b2"><span class="hide">선</span></div>
+                        <div class="address">
+                            <img src="images/letter.png" alt="" class="img1">
+                            <p>asde621@naver.com</p>
+                            <img src="images/phone.png" alt="" class="img2">
+                            <span>010-7733-4397</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cursor-follower B">
+            <div class="cursor-follower2"></div>
+        </div>
+        <div class="cursor-follower C">
+            <div class="cursor-follower2"></div>
+        </div>
+        <div class="cursor-follower D">
+            <div class="cursor-follower2"></div>
+        </div>
+        <div class="cursor-follower3 E">
+            <div class="cursor-follower3"></div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

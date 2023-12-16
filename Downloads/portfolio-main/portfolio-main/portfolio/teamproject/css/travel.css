@@ -1,0 +1,665 @@
+@charset "UTF-8";
+body {
+  overflow: hidden;
+}
+
+#section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(../img/바다색.png);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+#section #map {
+  flex: 1;
+  background-image: url(../img/map.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+}
+#section #map .outTitle {
+  opacity: 0;
+  font-size: 35px;
+  font-weight: bold;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+#section #map .outTitle.off {
+  opacity: 0;
+}
+#section #map .btnBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#section #map .btnBox button {
+  position: absolute;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#section #map .btnBox button.on {
+  background: orange;
+  color: #fff;
+}
+#section #map .btnBox #seoul {
+  top: 22%;
+  right: 55%;
+}
+#section #map .btnBox #busan {
+  top: 55%;
+  left: 61%;
+}
+#section #map .btnBox #gangwon {
+  top: 18%;
+  left: 58%;
+}
+#section #map .btnBox #daejeon {
+  top: 40%;
+  right: 50%;
+}
+#section #map .btnBox #gwangju {
+  top: 60%;
+  right: 58%;
+}
+#section #map .btnBox #jeju {
+  top: 82%;
+  right: 62%;
+}
+#section #contBox {
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background: rgb(50, 50, 50);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+}
+#section #contBox.close {
+  opacity: 0;
+}
+#section #contBox .inTitle {
+  font-size: 30px;
+  padding-top: 50px;
+  display:none;
+}
+#section #contBox .inTitle span {
+  background: orange;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#section #contBox .inTitle.on {
+  display:block;
+}
+#section #contBox #close {
+  flex: 1 1 1;
+  padding: 5px;
+  font-size: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  display: none;
+  opacity: 0.7;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+#section #contBox #close:hover {
+  opacity: 1;
+}
+#section #contBox .imgBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  background: #fff;
+  overflow-y: scroll;
+}
+#section #contBox .imgBox .img {
+  flex: 1 1 50%;
+  height: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+}
+#section #contBox .imgBox .img p {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  display: none;
+  font-size: 13px;
+  padding-top: 3%;
+  transform: translate(0, 80%);
+  line-height: 15px;
+  margin-top: auto;
+}
+#section #contBox .imgBox .img p span {
+  font-size: 18px;
+}
+#section #contBox .imgBox .img p i {
+  font-size: 60px;
+  padding: 12% 0 10% 0;
+}
+#section #contBox .imgBox .img.img:hover p {
+  transform: translate(0, 0);
+}
+#section #contBox.spring.seoul .img, #section #contBox.spring.seoul .seoul.spring {
+  display: block;
+}
+#section #contBox.spring.seoul .img1 {
+  background-image: url(../img/봄서울남산.png);
+}
+#section #contBox.spring.seoul .img2 {
+  background-image: url(../img/벚꽃석촌호수.png);
+}
+#section #contBox.spring.seoul .img3 {
+  background-image: url(../img/벚꽃경희대.png);
+}
+#section #contBox.spring.seoul .img4 {
+  background-image: url(../img/벚꽃인천대공원.png);
+}
+#section #contBox.spring.seoul .img5 {
+  background-image: url(../img/봄인천수봉공원.png);
+}
+#section #contBox.spring.seoul .img6 {
+  background-image: url(../img/봄수원만석공원.png);
+}
+#section #contBox.spring.busan .img, #section #contBox.spring.busan .busan.spring {
+  display: block;
+}
+#section #contBox.spring.busan .img1 {
+  background-image: url(../img/봄부산온천천.png);
+}
+#section #contBox.spring.busan .img2 {
+  background-image: url(../img/벚꽃부산을숙도생태공원.png);
+}
+#section #contBox.spring.busan .img3 {
+  background-image: url(../img/포항영일대호수공원.JPG);
+}
+#section #contBox.spring.busan .img4 {
+  background-image: url(../img/벚꽃대구지저동벚꽃터널.png);
+}
+#section #contBox.spring.busan .img5 {
+  background-image: url(../img/벚꽃대구이월드.png);
+}
+#section #contBox.spring.busan .img6 {
+  background-image: url(../img/울산무거천.JPG);
+}
+#section #contBox.spring.gangwon .img, #section #contBox.spring.gangwon .gangwon.spring {
+  display: block;
+}
+#section #contBox.spring.gangwon .img1 {
+  background-image: url(../img/강원강릉경포대.png);
+}
+#section #contBox.spring.gangwon .img2 {
+  background-image: url(../img/강원반곡역벚꽃.png);
+}
+#section #contBox.spring.gangwon .img3 {
+  background-image: url(../img/강원삼척맹방꽃길.png);
+}
+#section #contBox.spring.gangwon .img4 {
+  background-image: url(../img/강원속초설악산.png);
+}
+#section #contBox.spring.gangwon .img5 {
+  background-image: url(../img/강원춘천댐벚꽃.png);
+}
+#section #contBox.spring.gangwon .img6 {
+  background-image: url(../img/강원영월연당원.jpg);
+}
+#section #contBox.spring.daejeon .img, #section #contBox.spring.daejeon .daejeon.spring {
+  display: block;
+}
+#section #contBox.spring.daejeon .img1 {
+  background-image: url(../img/봄대전오월드.png);
+}
+#section #contBox.spring.daejeon .img2 {
+  background-image: url(../img/봄세종중앙공원.jpg);
+}
+#section #contBox.spring.daejeon .img3 {
+  background-image: url(../img/봄공주한옥마을.png);
+}
+#section #contBox.spring.daejeon .img4 {
+  background-image: url(../img/벚꽃전주동물원.png);
+}
+#section #contBox.spring.daejeon .img5 {
+  background-image: url(../img/벚꽃전주완산공원.png);
+}
+#section #contBox.spring.daejeon .img6 {
+  background-image: url(../img/봄전주아중호수.png);
+}
+#section #contBox.spring.gwangju .img, #section #contBox.spring.gwangju .gwangju.spring {
+  display: block;
+}
+#section #contBox.spring.gwangju .img1 {
+  background-image: url(../img/봄광주박물관.png);
+}
+#section #contBox.spring.gwangju .img2 {
+  background-image: url(../img/나주빛가람호수공원.png);
+}
+#section #contBox.spring.gwangju .img3 {
+  background-image: url(../img/봄광주어린이공원.png);
+}
+#section #contBox.spring.gwangju .img4 {
+  background-image: url(../img/봄남원광한루.png);
+}
+#section #contBox.spring.gwangju .img5 {
+  background-image: url(../img/봄장성호수변길.png);
+}
+#section #contBox.spring.gwangju .img6 {
+  background-image: url(../img/봄장성유채꽃밭.png);
+}
+#section #contBox.spring.jeju .img, #section #contBox.spring.jeju .jeju.spring {
+  display: block;
+}
+#section #contBox.spring.jeju .img1 {
+  background-image: url(../img/봄제주휴애리자연생활공원.png);
+}
+#section #contBox.spring.jeju .img2 {
+  background-image: url(../img/봄제주휴애리동백정원.png);
+}
+#section #contBox.spring.jeju .img3 {
+  background-image: url(../img/봄제주산방산유채꽃밭.png);
+}
+#section #contBox.spring.jeju .img4 {
+  background-image: url(../img/봄제주걸매생태공원.png);
+}
+#section #contBox.spring.jeju .img5 {
+  background-image: url(../img/봄제주칠십리공원.png);
+}
+#section #contBox.spring.jeju .img6 {
+  background-image: url(../img/봄제주한림공원.png);
+}
+#section #contBox.summer.seoul .img, #section #contBox.summer.seoul .seoul.summer {
+  display: block;
+}
+#section #contBox.summer.seoul .img1 {
+  background-image: url();
+}
+#section #contBox.summer.seoul .img2 {
+  background-image: url();
+}
+#section #contBox.summer.seoul .img3 {
+  background-image: url();
+}
+#section #contBox.summer.seoul .img4 {
+  background-image: url();
+}
+#section #contBox.summer.seoul .img5 {
+  background-image: url();
+}
+#section #contBox.summer.seoul .img6 {
+  background-image: url();
+}
+#section #contBox.summer.busan .img, #section #contBox.summer.busan .busan.summer {
+  display: block;
+}
+#section #contBox.summer.busan .img1 {
+  background-image: url(../img/여름해운대.png);
+}
+#section #contBox.summer.busan .img2 {
+  background-image: url();
+}
+#section #contBox.summer.busan .img3 {
+  background-image: url();
+}
+#section #contBox.summer.busan .img4 {
+  background-image: url();
+}
+#section #contBox.summer.busan .img5 {
+  background-image: url();
+}
+#section #contBox.summer.busan .img6 {
+  background-image: url();
+}
+#section #contBox.summer.gangwon .img, #section #contBox.summer.gangwon .gangwon.summer {
+  display: block;
+}
+#section #contBox.summer.gangwon .img1 {
+  background-image: url();
+}
+#section #contBox.summer.gangwon .img2 {
+  background-image: url();
+}
+#section #contBox.summer.gangwon .img3 {
+  background-image: url();
+}
+#section #contBox.summer.gangwon .img4 {
+  background-image: url();
+}
+#section #contBox.summer.gangwon .img5 {
+  background-image: url();
+}
+#section #contBox.summer.gangwon .img6 {
+  background-image: url();
+}
+#section #contBox.summer.daejeon .img, #section #contBox.summer.daejeon .daejeon.summer {
+  display: block;
+}
+#section #contBox.summer.daejeon .img1 {
+  background-image: url();
+}
+#section #contBox.summer.daejeon .img2 {
+  background-image: url();
+}
+#section #contBox.summer.daejeon .img3 {
+  background-image: url();
+}
+#section #contBox.summer.daejeon .img4 {
+  background-image: url();
+}
+#section #contBox.summer.daejeon .img5 {
+  background-image: url();
+}
+#section #contBox.summer.daejeon .img6 {
+  background-image: url();
+}
+#section #contBox.summer.gwangju .img, #section #contBox.summer.gwangju .gwangju.summer {
+  display: block;
+}
+#section #contBox.summer.gwangju .img1 {
+  background-image: url();
+}
+#section #contBox.summer.gwangju .img2 {
+  background-image: url();
+}
+#section #contBox.summer.gwangju .img3 {
+  background-image: url();
+}
+#section #contBox.summer.gwangju .img4 {
+  background-image: url();
+}
+#section #contBox.summer.gwangju .img5 {
+  background-image: url();
+}
+#section #contBox.summer.gwangju .img6 {
+  background-image: url();
+}
+#section #contBox.summer.jeju .img, #section #contBox.summer.jeju .jeju.summer {
+  display: block;
+}
+#section #contBox.summer.jeju .img1 {
+  background-image: url();
+}
+#section #contBox.summer.jeju .img2 {
+  background-image: url();
+}
+#section #contBox.summer.jeju .img3 {
+  background-image: url();
+}
+#section #contBox.summer.jeju .img4 {
+  background-image: url();
+}
+#section #contBox.summer.jeju .img5 {
+  background-image: url();
+}
+#section #contBox.summer.jeju .img6 {
+  background-image: url();
+}
+#section #contBox.fall.seoul .img, #section #contBox.fall.seoul .seoul.fall {
+  display: block;
+}
+#section #contBox.fall.seoul .img1 {
+  background-image: url();
+}
+#section #contBox.fall.seoul .img2 {
+  background-image: url();
+}
+#section #contBox.fall.seoul .img3 {
+  background-image: url();
+}
+#section #contBox.fall.seoul .img4 {
+  background-image: url();
+}
+#section #contBox.fall.seoul .img5 {
+  background-image: url();
+}
+#section #contBox.fall.seoul .img6 {
+  background-image: url();
+}
+#section #contBox.fall.busan .img, #section #contBox.fall.busan .busan.fall {
+  display: block;
+}
+#section #contBox.fall.busan .img1 {
+  background-image: url();
+}
+#section #contBox.fall.busan .img2 {
+  background-image: url();
+}
+#section #contBox.fall.busan .img3 {
+  background-image: url();
+}
+#section #contBox.fall.busan .img4 {
+  background-image: url();
+}
+#section #contBox.fall.busan .img5 {
+  background-image: url();
+}
+#section #contBox.fall.busan .img6 {
+  background-image: url();
+}
+#section #contBox.fall.gangwon .img, #section #contBox.fall.gangwon .gangwon.fall {
+  display: block;
+}
+#section #contBox.fall.gangwon .img1 {
+  background-image: url();
+}
+#section #contBox.fall.gangwon .img2 {
+  background-image: url();
+}
+#section #contBox.fall.gangwon .img3 {
+  background-image: url();
+}
+#section #contBox.fall.gangwon .img4 {
+  background-image: url();
+}
+#section #contBox.fall.gangwon .img5 {
+  background-image: url();
+}
+#section #contBox.fall.gangwon .img6 {
+  background-image: url();
+}
+#section #contBox.fall.daejeon .img, #section #contBox.fall.daejeon .daejeon.fall {
+  display: block;
+}
+#section #contBox.fall.daejeon .img1 {
+  background-image: url();
+}
+#section #contBox.fall.daejeon .img2 {
+  background-image: url();
+}
+#section #contBox.fall.daejeon .img3 {
+  background-image: url();
+}
+#section #contBox.fall.daejeon .img4 {
+  background-image: url();
+}
+#section #contBox.fall.daejeon .img5 {
+  background-image: url();
+}
+#section #contBox.fall.daejeon .img6 {
+  background-image: url();
+}
+#section #contBox.fall.gwangju .img, #section #contBox.fall.gwangju .gwangju.fall {
+  display: block;
+}
+#section #contBox.fall.gwangju .img1 {
+  background-image: url();
+}
+#section #contBox.fall.gwangju .img2 {
+  background-image: url();
+}
+#section #contBox.fall.gwangju .img3 {
+  background-image: url();
+}
+#section #contBox.fall.gwangju .img4 {
+  background-image: url();
+}
+#section #contBox.fall.gwangju .img5 {
+  background-image: url();
+}
+#section #contBox.fall.gwangju .img6 {
+  background-image: url();
+}
+#section #contBox.fall.jeju .img, #section #contBox.fall.jeju .jeju.fall {
+  display: block;
+}
+#section #contBox.fall.jeju .img1 {
+  background-image: url();
+}
+#section #contBox.fall.jeju .img2 {
+  background-image: url();
+}
+#section #contBox.fall.jeju .img3 {
+  background-image: url();
+}
+#section #contBox.fall.jeju .img4 {
+  background-image: url();
+}
+#section #contBox.fall.jeju .img5 {
+  background-image: url();
+}
+#section #contBox.fall.jeju .img6 {
+  background-image: url();
+}
+#section #contBox.winter.seoul .img, #section #contBox.winter.seoul .seoul.winter {
+  display: block;
+}
+#section #contBox.winter.seoul .img1 {
+  background-image: url();
+}
+#section #contBox.winter.seoul .img2 {
+  background-image: url();
+}
+#section #contBox.winter.seoul .img3 {
+  background-image: url();
+}
+#section #contBox.winter.seoul .img4 {
+  background-image: url();
+}
+#section #contBox.winter.seoul .img5 {
+  background-image: url();
+}
+#section #contBox.winter.seoul .img6 {
+  background-image: url();
+}
+#section #contBox.winter.busan .img, #section #contBox.winter.busan .busan.winter {
+  display: block;
+}
+#section #contBox.winter.busan .img1 {
+  background-image: url();
+}
+#section #contBox.winter.busan .img2 {
+  background-image: url();
+}
+#section #contBox.winter.busan .img3 {
+  background-image: url();
+}
+#section #contBox.winter.busan .img4 {
+  background-image: url();
+}
+#section #contBox.winter.busan .img5 {
+  background-image: url();
+}
+#section #contBox.winter.busan .img6 {
+  background-image: url();
+}
+#section #contBox.winter.gangwon .img, #section #contBox.winter.gangwon .gangwon.winter {
+  display: block;
+}
+#section #contBox.winter.gangwon .img1 {
+  background-image: url();
+}
+#section #contBox.winter.gangwon .img2 {
+  background-image: url();
+}
+#section #contBox.winter.gangwon .img3 {
+  background-image: url();
+}
+#section #contBox.winter.gangwon .img4 {
+  background-image: url();
+}
+#section #contBox.winter.gangwon .img5 {
+  background-image: url();
+}
+#section #contBox.winter.gangwon .img6 {
+  background-image: url();
+}
+#section #contBox.winter.daejeon .img, #section #contBox.winter.daejeon .daejeon.winter {
+  display: block;
+}
+#section #contBox.winter.daejeon .img1 {
+  background-image: url();
+}
+#section #contBox.winter.daejeon .img2 {
+  background-image: url();
+}
+#section #contBox.winter.daejeon .img3 {
+  background-image: url();
+}
+#section #contBox.winter.daejeon .img4 {
+  background-image: url();
+}
+#section #contBox.winter.daejeon .img5 {
+  background-image: url();
+}
+#section #contBox.winter.daejeon .img6 {
+  background-image: url();
+}
+#section #contBox.winter.gwangju .img, #section #contBox.winter.gwangju .gwangju.winter {
+  display: block;
+}
+#section #contBox.winter.gwangju .img1 {
+  background-image: url();
+}
+#section #contBox.winter.gwangju .img2 {
+  background-image: url();
+}
+#section #contBox.winter.gwangju .img3 {
+  background-image: url();
+}
+#section #contBox.winter.gwangju .img4 {
+  background-image: url();
+}
+#section #contBox.winter.gwangju .img5 {
+  background-image: url();
+}
+#section #contBox.winter.gwangju .img6 {
+  background-image: url();
+}
+#section #contBox.winter.jeju .img, #section #contBox.winter.jeju .jeju.winter {
+  display: block;
+}
+#section #contBox.winter.jeju .img1 {
+  background-image: url();
+}
+#section #contBox.winter.jeju .img2 {
+  background-image: url();
+}
+#section #contBox.winter.jeju .img3 {
+  background-image: url();
+}
+#section #contBox.winter.jeju .img4 {
+  background-image: url();
+}
+#section #contBox.winter.jeju .img5 {
+  background-image: url();
+}
+#section #contBox.winter.jeju .img6 {
+  background-image: url();
+}/*# sourceMappingURL=travel.css.map */

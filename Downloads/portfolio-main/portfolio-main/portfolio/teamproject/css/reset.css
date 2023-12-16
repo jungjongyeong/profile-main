@@ -1,0 +1,70 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'neon';
+	src: url('../fonts/SDSamliphopangcheOutline.otf') format('truetype');
+  }
+* { margin:0; padding:0; box-sizing:border-box;
+	font-family: "neon"; }
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section, video, audio { display:block; }
+a { vertical-align:baseline; text-decoration:none; color:inherit; }
+img { border:0; max-width:100%; vertical-align:middle }
+table { border-collapse:collapse; width:100%; 
+	table-layout: fixed;}
+input, select { vertical-align:middle; }
+button, input[type=button], input[type=submit] { background:none; cursor:pointer }
+fieldset { border:none }
+legend, caption { display:none }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal }
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+body {
+	line-height: 1;
+}
+pre {font-family:inherit; font-size:1em}
+address, em { font-style:normal }
+th, strong { font-weight:normal }
+body, html { height:100% }
+
+/* list style */
+ol, ul { list-style: none; }
+
+/* clearfix */
+.cf::before, .cf::after {
+	content: "";
+	display: block;
+	clear:both;
+}
+.blind { position:absolute; width:1px; height:1px; overflow:hidden; text-indent:-9999px; font-size:0px; line-height:0px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

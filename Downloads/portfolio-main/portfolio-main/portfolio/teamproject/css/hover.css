@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'neon';
+  src: url('../fonts/SDSamliphopangcheOutline.otf') format('truetype');
+}* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "neon";
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* img {
+  width: 100%;
+  -o-object-fit: cover;
+     
+  height: 100%;
+} */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.skills {
+  height: 100%;
+    width: 100%;
+}
+.skills .skills-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 100%;
+  margin:0 20px;
+}
+@media (max-width: 700px) {
+  .skills .skills-flex-container {
+    gap: 30px;
+  }
+}
+.skills .skills-flex-container .box {
+  flex: 1 1;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 24px;
+    padding: 45px;
+    text-align: center;
+    border: 10px solid #fff;
+    transition: all 0.3s ease-in;
+    border-radius: 30px;
+    background: rgba(245, 245, 245, 0.7);
+    cursor: pointer;
+
+}
+.skills .skills-flex-container .box .image {
+  transition: all 0.3s ease-in-out 0.1s;
+  object-fit: cover;
+}
+.skills .skills-flex-container .box .image img {
+  max-width: 75px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.skills .skills-flex-container .box .title {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(66, 161, 500);
+  transition: all 0.3s ease-in-out;
+  font-size:30px;
+}
+.skills .skills-flex-container .box .title.titleColor2 {
+  color: rgb(201 151 61);
+}
+.skills .skills-flex-container .box .title.titleColor3 {
+  color: rgb(57 113 183);
+}
+.skills .skills-flex-container .box .title.titleColor4 {
+  color: rgb(147 143 28);
+}
+.skills .skills-flex-container .box:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 30px;
+  transform: scale(1.1);
+}
+.skills .skills-flex-container .box:hover .image {
+  transform: scale(1.5) translateY(-20px);
+}
+.skills .skills-flex-container .box:hover .image img {
+  animation: bouncing 0.5s 0.3s;
+}
+.skills .skills-flex-container .box:hover .title {
+  letter-spacing: 2px;
+}
+@media (max-width: 1100px) {
+  .skills .skills-flex-container .box {
+    flex: 1 0 25%;
+  }
+}
+@media (max-width: 630px) {
+  .skills .skills-flex-container .box {
+    flex: 1 0 35%;
+    padding: 15px;
+  }
+  .skills .skills-flex-container .box .image img {
+    max-width: 50px;
+  }
+}
+
+@keyframes bouncing {
+  from, to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}/*# sourceMappingURL=mystyle.css.map */

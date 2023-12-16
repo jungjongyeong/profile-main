@@ -1,0 +1,96 @@
+.index_main { font-family: 'NotoSans', 'Malgun Gothic', 'Dotum' ,sans-serif; background: url(../images/main_img.png) no-repeat center; width:100%; height:700px; font-weight: bold;}
+.index_main.sub1 { height:100px; background: #fff;}
+
+.main_top { border-bottom:2px solid #fff; padding:0 0 30px;}
+
+.logo { display: flex; float:left; font-size:16px; color:#fff; margin:40px 0 0 50px; letter-spacing: 3px}
+.logo a { color:#fff;}
+.logo .logo_txt { display: inline-block; font-size: 14px; border:1px solid #fff; margin:0 10px 0 0; padding:0 5px;}
+
+/* gnb */
+.gnb { display: none; position: absolute; width:100%; top:0; left:0; }
+.gnb.sub1 {display: block;}
+.main_menu.top { width:100%; padding:40px 0 30px 442px; background: #fff; border-bottom:1px solid #999; box-sizing: border-box; }
+.main_menu.top ul { display: flex;}
+.main_menu.top ul li { padding:0 50px;}
+.main_menu.top ul li a { color:#000; transition: .2s;}
+.main_menu.top ul li a:hover { color:green;}
+.main_menu.top .top_logo { position: absolute; left:50px; top:35px; }
+.main_menu.top .top_logo span { display: inline-block; font-size:16px; color:#000; letter-spacing: 3px; font-weight: bold;}
+.main_menu.top .top_logo img {width:100px;}
+
+.sub { position: relative; height:400px;   width:100%;}
+.sub.sub1 { display: none; position: relative; height:400px;   width:100%;}
+.sub .sub_main { position: absolute; display: flex; width:100%; height:380px; margin:0 auto; padding:0 0 0 502px; box-sizing: border-box; background: rgba(255,255,255,0.9); text-align: center;}
+.sub .sub_main > div ul li {  padding:7px 0;}
+.sub .sub_main ul li a { display:block; font-size: 16px; color:#000; font-weight:600; text-align: center;}
+.sub .sub_main ul li a:hover { color:green;}
+.sub .sub_main > .sub_2 { margin:0 0 0 90px;}
+.sub .sub_main > .sub_3 { margin:0 0 0 10px;}
+.sub .sub_main > .sub_4 { margin:0 0 0 30px;}
+.sub .sub_main > .sub_5 { margin:0 0 0 100px;}
+
+.main_menu { display: flex; padding:40px 0 0 180px;}
+.main_menu li { padding:0 50px;}
+.main_menu li a { color:#fff;}
+
+.main_centxt { color:#fff; font-size:50px; padding:200px 0 0 140px; font-weight: normal; }
+.main_centxt > div {width:500px; height:80px; animation: centxt 1.9s infinite;}
+.main_centxt .centxt3 { font-weight: 900; animation: centxt3 1.9s infinite;}
+
+/* main */
+.main { background: #fff; width:100%; height:800px;}
+.main .h2 { float: left; padding:150px 0 0 140px;}
+.main .h2 b { color:#ededed;}
+.main .h2 p { color:#000; font-weight: bold; font-size:40px;}
+
+.main .stock { position: relative; float:right; margin:80px 115px 0 0; width:320px; height:300px; background-color:#333333; transition: 1s linear; transform: translateY(200px);}
+.box2.active .stock { transform: translateY(0);}
+.main .stock span { position: absolute; left:20px; top:20px; color:#fff;}
+.main .stock i { position: absolute; right:20px; bottom:150px; color:#fff; color:red;}
+.main .stock i::before { content: "▲"; color:red; font-size:13px; margin:0 10px 0 0; }
+.main .stock p { position: absolute; right:20px; bottom:70px; font-size: 50px; color:#fff;}
+.main .stock em { position: absolute; right:20px; bottom:20px; font-size:15px; color:#7c7c7c;}
+
+.main .about_list { position: relative; display: flex;padding:0 0 0 140px; width:1280; height:300px; background: url(../images/main_img2.png) no-repeat; }
+.main .about_list img { position: absolute;top:40%; width:15px; height:15px; }
+.main .about_list img.img_left { left:5px;}
+.main .about_list img.img_right { right:5px;}
+.main .about_list .list1 { position: relative; width: 640px; height:300px; background: rgba(255,255,255,0.8);transition:1s linear; transform: translateY(200px);}
+.box2.active .list1 { transform: translateY(0);}
+.main .about_list .list1 span { position: absolute; left:10px; top:20px; font-size:15px; color:#999999;}
+.main .about_list .list1 i { position: absolute; left:50px; top:100px; width:70px; height:20px; border-radius: 10px; background:#005ec5; color:#fff; font-size:14px; text-align: center;}
+.main .about_list .list1 p { position: absolute; left:50px; top:45%;  color:#000; font-weight: bold}
+.main .about_list .list1 em { position: absolute; left:50px; top:60%;  color:#000; font-size:12px;}
+.main .about_list .list2 { position: relative; width: 320px; height:300px; background: rgb(2 94 196 / 60%); transition:1.2s linear; transform: translateY(200px);}
+.box2.active .list2 { transform: translateY(0);}
+.main .about_list .list2 span { position: absolute; left:10px; top:20px; font-size:15px; color:#02c5fb;}
+.main .about_list .list2 i { position: absolute; left:50px; top:100px;  color:#fff; }
+.main .about_list .list3 { position: relative; width: 320px; height:300px; background: rgba(34,34,34,0.2); transition: 1.4s linear; transform: translateY(200px);}
+.box2.active .list3 { transform: translateY(0);}
+.main .about_list .list3 span { position: absolute; left:10px; top:20px; font-size:15px; color:#999;}
+.main .about_list .list3 ul { position: absolute; left:30px; right:30px;  top:60px;}
+.main .about_list .list3 ul li { color:#fff; padding: 0 0 10px; border-bottom:1px solid #999; margin:0 0 10px;}
+.main .about_list .list3 ul li i { font-size:13px;}
+.main .about_list .plus { position: absolute; right:20px; bottom: 0; font-size:40px;}
+.main .about_list .plus a { color:#999;}
+
+.app_section { position: relative; width:100%; height:430px; background: #f9f9f9}
+.app_section .font { padding: 50px 0 0 140px;}
+.app_section .font span { color:#e3e3e3; font-weight: bold;}
+.app_section .font h2 { font-size:40px;}
+.app_section .call_img { position: absolute; right:100px; top:50px; width:250px; height:180px;}
+.app_section ul { display: flex; margin:50px 0 0; border-top:1px solid #e9e9e9;}
+.app_section ul li { border-left:1px solid #e9e9e9;}
+.app_section ul li a img { width:300px; height:150px}
+
+footer { position: relative; display: block; background: #333333; width:100%; height:300px; padding:20px 0 0;}
+footer .ft_main { padding:0 0 0 140px; color:#fff;}
+footer .ft_main .main_list { display: flex; padding: 0 0 50px;}
+footer .ft_main .main_list li ~ li { position: relative; padding: 0 0 0 30px;}
+footer .ft_main .main_list li ~ li::before { position: absolute; content: ""; width:1px; height:15px; background: #999; left:15px; top:60%; transform: translateY(-50%); }
+footer .ft_main .main_list li a { color:#fff;}
+footer .ft_main .main_list2 li { font-size:14px; padding:0 0 10px;}
+footer .ft_main .main_list2 li span { color:#999;}
+footer .ft_main .family { position: absolute; right:100px; top:100px; width:200px; height:50px; background: #222222; font-size:17px; text-align: left; padding:10px 60px 0 10px; box-sizing: border-box; color:#fff;}
+footer .ft_main .family:after { position: absolute; right:20px; top:17px; font-size:10px; content: "▲"; }

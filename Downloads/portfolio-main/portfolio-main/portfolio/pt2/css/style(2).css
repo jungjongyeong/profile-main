@@ -1,0 +1,51 @@
+html { font-size: 20px;}
+body { font-size: 1rem;}
+.gnb { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 120; background:#fff;}
+.gnb .top { padding:2.86rem 1.9rem 0; background:#287BB2; height:8.516rem; box-sizing: border-box; }
+.gnb .top .btn_home { position: absolute; left:0; top:0; background:url(../images/ico_home.png) no-repeat center / .79rem auto; width:2.35rem; height:2.35rem;}
+.gnb .top .profile { position: relative; font-size:0; padding: 0 0 0 2.18rem}
+.gnb .top .profile .photo { overflow: hidden; position: absolute; left:0; top:.083rem;  width:1.43rem; height:1.43rem;  border-radius: 100%; background: #fff;}
+.gnb .top .profile .photo img {  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 120%;}
+.gnb .top .profile * { color:#fff; vertical-align: middle;}
+.gnb .top .profile a { font-size:.65rem; text-decoration: underline;}
+.gnb .top .profile .info { padding:.4rem 0 .93rem}
+.gnb .top .profile .info span { font-size:.416rem}
+.gnb .top .profile .info em { font-size:.5rem;}
+.gnb .top .profile .info em:after { display: inline-block; content: ""; width:1px; height:.433rem; background:#fff;  margin:0 .4rem}
+.gnb .top .profile .info button { background: none; font-size:.516rem}
+.gnb .top .profile .info button:before { display: inline-block; width:.75rem; height:.65rem; content: ""; background:url(../images/ico_logout.png) no-repeat center / 100% auto; vertical-align: -2px; margin:0 1px 0 0;}
+.gnb .top .search { position: relative; height: 1.6rem; }
+.gnb .top .search input { width:100%; height:1.6rem; border-radius: .85rem; padding: 0 0 0 .633rem}
+.gnb .top .search input::placeholder { font-size:.533rem; color:#BBBBBB}
+.gnb .top .search button { position: absolute; right:0; top:0;  background:url(../images/btn_search.png) no-repeat left /  auto .812rem; width:1.6rem; height:1.8rem;}
+
+.gnb .nav { display: flex; height:calc(100vh - 8.516rem)}
+.gnb .nav > nav { flex:none; padding: .8rem .366rem; min-width: 5.583rem; width: 100%; max-width:25%; background:#F7F7F7; box-sizing: border-box;}
+.gnb .nav > nav button {  width:100%; height: 1.883rem; font-size: .55rem; color:#0F2522; text-align: left; background: none;}
+.gnb .nav > nav button:hover,
+.gnb .nav > nav .active button { width:calc(100% + .732rem); background:#287BB2; color: #fff; border-radius: 1.883rem;}
+
+.gnb .nav > nav button:before { content: ""; display: inline-block; width: .544rem; height: .544rem; margin: 0 .316rem 0 .683rem; background:no-repeat center / 100% auto;}
+
+.gnb .nav > nav .ico1 button:before { background-image: url(../images/ico_menu_left1_on.png);}
+.gnb .nav > nav .ico2 button:before { background-image: url(../images/ico_menu_left1_on.png);}
+.gnb .nav > nav .ico3 button:before { background-image: url(../images/ico_menu_left1_on.png);}
+
+.gnb .nav .nav_con { flex:1; padding:1.15rem .819rem 0 1.26rem}
+.gnb .nav .nav_con .align_justify { display: flex; justify-content: space-between;}
+.gnb .nav .nav_con .tit h3 { color:#0F2522; font-size:.716rem;}
+.gnb .nav .nav_con .tit {  border-bottom:1px solid #287BB2; }
+.gnb .nav .nav_con .tit button { background:url(../images/ico_menu_write.png) no-repeat right .158rem center / .659rem auto; width:1rem; height:1rem;transform: translateY(-0.1rem)}
+.gnb .nav .nav_con nav { padding: .833rem 0 0 0; }
+.gnb .nav .nav_con nav a { display: block; line-height: 1.75rem; font-size:.6rem; color:#0F2522; font-weight: bold ; background:url(../images/ico_menu_time.png) no-repeat right .158rem center / .65rem auto;}
+.gnb .nav .nav_con nav .fav a { background:url(../images/ico_fav.png) no-repeat right .158rem center / .7rem auto;}
+
+
+.gnb .btn { position: absolute; left:0; bottom:0; right:0; background:#fff; padding: 0 .716rem; }
+.gnb .btn ul { display: flex; width:100%; height:2.06rem;}
+.gnb .btn li a { display:inline-block; font-size:.533rem; color:#0F2522; line-height: 2.033rem;}
+.gnb .btn li { padding:0 .716rem 0 0; }
+.gnb .btn li:before { content: ""; display:inline-block; width:.783rem; height:.783rem; background:no-repeat center / 100% auto; margin: 0 0.1rem 0 0; text-align: -1rem}
+.gnb .btn .btn1:before { background-image:url(../images/ico_menu1.png)}
+.gnb .btn .btn2:before { background-image:url(../images/ico_menu2.png)}
+.gnb .btn .btn3:before { background-image:url(../images/ico_menu3.png)}

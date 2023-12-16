@@ -1,0 +1,92 @@
+html { font-size:17px;}
+body { font-size:1rem;}
+
+.header { padding:0; border-bottom:none;}
+.header:after { content: ""; display: block; clear:both;}
+.header h1 { position: static; float: left;}
+.header h1 a { width: 6.2rem;}
+.header .menu { position: static; float: right;}
+.mobile_nav { display: none; position: absolute; left: 0; right: 0; padding: 4rem 0 0; z-index: 50;}
+.header .gnb {text-align: left; background: #fff;}
+.header .gnb > ul > li { display: block; border-bottom: 1px solid #eee;}
+.header .gnb > ul > li.active { border-bottom:none;}
+.header .gnb > ul > li.active > a { color:#da217e;}
+.header .gnb > ul > li.active > a:after { transform: rotate(0);}
+.header .gnb > ul > li.active > ul { display: block;}
+.header .gnb > ul > li > a { position: relative; width:100%; line-height: 3rem; text-indent: 1.5rem;}
+.header .gnb > ul > li > a:after { content: ""; position:absolute; right:0.5rem; top:0;  width: 3rem; height: 3rem; background: url(../images/bu_arrow_nav.png) no-repeat center; transform: rotate(180deg);}
+.header .gnb ul ul { display: none; position: static; margin:0; padding:1.1rem 2.5rem; height:auto; border-left:none; background: #f8f8f8; border-top:1px solid #eee;}
+.header .gnb ul ul li:first-child { margin-top:0;}
+.header .gnb ul ul a {font-size: .9rem; color:#7f7f7f; line-height: 2rem; letter-spacing: -0.025rem;}
+
+.header .bg_nav { position: static; margin:0; padding:1.65rem 1rem; background: #fff;}
+.header .bg_nav > div {width:100%; height:auto;}
+.header .bg_nav .txt { display: none;}
+.header .bg_nav > div ul { display: flex; flex-direction: column; position:static; border: 1px solid #eee;}
+.header .bg_nav > div ul li { flex:none;}
+.header .bg_nav > div ul li ~ li { border-left:none; border-top: 1px solid #eee;}
+.header .util { display: none; background: #da217e;}
+.header .util > ul { float:none;}
+.header .util > ul > li { display: none;}
+.header .util .lang button { width: 7rem; margin:0; height: 4rem;
+ background-position:1.5rem center, right 1.5rem center;
+}
+.header .util > ul > li.lang { display: block;}
+.header .util .close { display: block; float: right;}
+.header .util .close button { width: 4rem; height: 4rem; background: url(../images/btn_close.png) no-repeat center;}
+
+.top { right:0; bottom: 22.1rem;}
+
+/* footer */
+footer { height: 22.1rem;}
+footer > div {width: 100%; padding: 6.5rem 0 0; background-position: center 2.5rem;}
+footer .footer_link { float: none; text-align: center;}
+footer .footer_link .link { text-align: center;}
+footer .footer_link .link li:first-child { padding-left: 0;}
+footer .footer_link .footer_select { padding: 1rem 0 0;}
+footer .footer_link .footer_select button { display: inline-flex;}
+footer address { float:none; width:100%; padding: 1.4rem 0 0; text-align: center; line-height: 1.5rem;}
+footer address br { display:block;}
+
+/* 서브공통 */
+.visual {  height: 13.5rem; background-size: cover;}
+.visual > div h2 { font-size:1.85rem; }
+.visual > div p {  font-size: 1rem;  margin: 0; padding: 1.15rem 0 0; border-bottom:none;}
+.visual > div ol { display: none;}
+
+.contents { width:100%; padding: 0 0 6.65rem;}
+.tab_type1 { position: relative; margin: 0 1rem; margin-top: -1.45rem; background: none;}
+.tab_type1 .btn_select { display: block; position: relative; width: 100%; height: 3rem; background: #da217e; text-indent: 1.1rem; color:#fff; text-align: left; font-size: .85rem;}
+.tab_type1 .btn_select:after { content: ""; position: absolute; right: 0; top: 0; width: 3rem; height: 3rem; background:url(../images/ico_tab_arrow.png) no-repeat center #333; }
+.tab_type1 ul { display:block; position: absolute; left: 0; right: 0; width:100%; box-shadow:none;}
+.tab_type1 ul > li:first-child { display: none;}
+.tab_type1 ul > li { width:100%; border-top:1px solid #fff;}
+.tab_type1 ul > li a { display: block; height: auto; line-height:2.35rem; font-size: .85rem; text-align: left; background: #efefef; text-indent: 1rem;}
+.tab_type1 ul > li.active a {color:initial; background:#efefef;}
+
+.tab_type2 { position: relative; margin: 0 1rem; padding: 0 0 2rem;}
+.tab_type2 > button { display: block; position: relative; width: 100%; height: 3.5rem; background: #fff; box-shadow: 0 .25rem .6rem rgba(0,0,0,.2); text-indent: 1.1rem; color:#333; text-align: left; font-size: .85rem;}
+.tab_type2 > button:after { content: ""; position: absolute; right: .65rem; top:50%; width: 1.75rem; height: 1.75rem; background:url(../images/ico_tab_arrow.png) no-repeat center #333;  transform: translateY(-50%);}
+.tab_type2 ul { display: none; position: absolute; left: 0; right: 0; z-index: 20;}
+.tab_type2 li { display:block; padding:0; border-top:1px solid #fff;}
+.tab_type2 li.active button,
+.tab_type2 li.active a { background:#efefef; border:none; color:#333;}
+.tab_type2 li button,
+.tab_type2 li a { line-height:2.5rem; font-size: .85rem; background: #efefef; text-indent: 1rem; border: none; text-align: left;}
+.tab_type2.big li button,
+.tab_type2.big li a { width:100%;}
+.tab_type2.small { text-align:center;}
+.tab_type2.small li { padding:0;}
+.tab_type2.small li a {width:100%;}
+
+
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .ie10_flex { position: relative;}
+    .ie10_flex > * { position:static; right: 50%; top: 50%; transform:none;}
+    .visual.ie10_flex > * { position:absolute; transform:translate(50%, -50%)}
+}
+
+
+/*  */

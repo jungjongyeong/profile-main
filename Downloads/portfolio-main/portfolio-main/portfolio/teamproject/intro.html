@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>오늘 어디가?</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d02a6b7d-3882-48bb-a12a-f92fbc850c03" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://www.notion.so/icons/palm-tree_green.svg"/></div><h1 class="page-title">오늘 어디가?</h1></header><div class="page-body"><p id="9647af23-4b2f-4808-bcb8-c867deebf899" class="">
+</p><figure class="callout" style="white-space:pre-wrap;display:flex" id="9b9b9570-dc6a-4039-816c-4ed0289f5583"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">“오늘 어디가? ” 는 여행을 가기전 여러가지 정보를 간편하게 알수있는 서비스입니다.</div></figure><p id="244867eb-3205-4d71-b67d-37d45a83a871" class="">
+</p><h3 id="be40c19e-21c6-4f6b-8312-5183e8a50b24" class=""><strong>프로젝트 기획 배경</strong></h3><hr id="ecc2c1e4-5ace-45a6-8c9b-686f54dd899d"/><p id="0519334e-72d5-4617-aba3-024c865da927" class=""><mark class="highlight-red_background">사람들은 여행가기 전 그 지역을 파악하고 싶은 욕구가 있다는것을 파악.</mark></p><ul id="713e23a1-8185-4b9e-867d-d664187e962f" class="bulleted-list"><li style="list-style-type:disc">지역을 검색해서 현재 <mark class="highlight-teal_background">날씨</mark>를 파악하고 싶다.</li></ul><ul id="e70e19b2-cfa3-4c1a-acdc-fb4aafbe71db" class="bulleted-list"><li style="list-style-type:disc">날씨에 따라서<mark class="highlight-blue_background"> 옷을 추천</mark> 받고 싶다.</li></ul><ul id="175279d5-6f8e-426c-ad24-f64e4b8ec817" class="bulleted-list"><li style="list-style-type:disc">그지역 <mark class="highlight-pink_background">먹거리</mark>를 여행가기전 파악하고 싶다.</li></ul><ul id="99222465-aab9-4552-adcc-66d5fc219cd3" class="bulleted-list"><li style="list-style-type:disc">그 지역 <mark class="highlight-purple_background">명소</mark>를 파악하고 싶다.</li></ul><ul id="1aabe09e-3c0b-4b97-8aab-7bd03b253db7" class="bulleted-list"><li style="list-style-type:disc">실시간 <mark class="highlight-gray_background">미세먼지</mark>를 알고싶다.</li></ul><p id="044c3238-76ea-4454-87d8-16ada71f26ac" class="">
+</p><p id="e4b316ed-eeb1-4cac-a3e2-c88a58a8382b" class="">
+</p><h3 id="262b3be3-72ca-4d8c-a716-d2e3b4c425d0" class=""><strong>프로젝트 상세 소개</strong></h3><hr id="6d611a3f-ca91-4b68-abf6-d715e4f08e20"/><p id="e2638600-44de-41f3-bda1-f7737a3de2c2" class="">💡 <strong>핵심 기능</strong></p><ol type="1" id="e6352dc8-1f5a-49d0-a36d-b786849d91b0" class="numbered-list" start="1"><li>자신이 가고싶은 <mark class="highlight-orange_background">여행지의 날씨 파악이 가능</mark>합니다.</li></ol><ol type="1" id="263c832d-a569-4d7b-a6d0-89a19a5975f7" class="numbered-list" start="2"><li><mark class="highlight-yellow_background">날씨에 따라서 의상 추천</mark>을 받을수 있습니다.</li></ol><ol type="1" id="f3a36766-9f18-49ad-b23f-3d970a28f511" class="numbered-list" start="3"><li><mark class="highlight-purple_background">검색한 지역의 맛집을 확인</mark>할수 있습니다.</li></ol><ol type="1" id="f7644d13-3039-4921-b038-97ebef93b485" class="numbered-list" start="4"><li><mark class="highlight-brown_background">검색한 지역의 명소</mark>들을 알수 있습니다.</li></ol><ol type="1" id="877b47bd-aa26-4dc2-840c-3d900878f67a" class="numbered-list" start="5"><li><mark class="highlight-teal_background">실시간 미세먼지</mark>를 알수 있습니다.</li></ol><p id="6876de73-48a4-4063-aeac-7ae8ba64559f" class="">
+</p><p id="96c6b259-f073-4d06-97dd-082917866763" class="">🙋🏻‍♂️ <strong>타겟 유저</strong></p><ul id="d348e19a-6251-4036-be9c-455fea21440f" class="bulleted-list"><li style="list-style-type:disc">10대~60대 거의 모든 유저 가능</li></ul><p id="1660992f-a471-4727-ac62-f76276600fc8" class="">
+</p><p id="f63ba8a3-64a0-49d9-b783-1f2d8264156d" class="">📍 <strong>기대 효과</strong></p><ol type="1" id="d2f105cc-c30e-4442-9044-1a15e9272250" class="numbered-list" start="1"><li>고객들이 여행 가기전에 <mark class="highlight-red">날씨</mark>, <mark class="highlight-pink">맛집</mark>, <mark class="highlight-teal">명소</mark>, <mark class="highlight-orange">미세먼지</mark>를 알수 있습니다</li></ol><ol type="1" id="2e7e22d9-c22f-4646-b2c1-ad1cc115837b" class="numbered-list" start="2"><li>지금 시즌에 뜨고있는 여행지를 유저가 확인하여 다녀올수 있습니다.</li></ol><p id="c6a49b9e-aadc-42ce-a58f-787792bb869c" class="">
+</p><p id="e184f808-2a9b-45d6-b46a-a4cee85f01f8" class="">
+</p><h3 id="cf46bc6d-70e8-4645-9b95-1cb1b24fbf75" class=""><strong>개발 기간 &amp; 일정</strong></h3><hr id="55fc882c-dbb3-492d-a961-aeb153ea20f3"/><ul id="1bde0436-5ffb-4dd1-b274-5a7706838e1d" class="bulleted-list"><li style="list-style-type:disc">개발 기간 : 2023.2.18 ~ 2023.4.1</li></ul><p id="0bf74994-5bf2-4fee-bb71-ee92c7392725" class="">
+</p><h3 id="f47a6498-9649-4c51-a49b-2b6f04b274f0" class="">팀원 소개</h3><hr id="c15ffaf5-c421-45c6-9e0a-73029c26d641"/><div id="31f97971-bbfe-4f5d-9086-06244c8219ac" class="collection-content"><h4 class="collection-title">Members</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>이름</th><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>역할</th><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>리팩토링</th></tr></thead><tbody><tr id="f5df403d-632f-4d49-9cb0-47c9544fd953"><td class="cell-title"><a href="https://www.notion.so/f5df403d632f4d499cb047c9544fd953">정종영(팀장)</a></td><td class="cell-\GB`"><span class="selected-value select-value-color-blue">frontend</span></td><td class="cell-pEbt"><span class="selected-value select-value-color-pink">참여</span></td></tr><tr id="7ce984a9-9bfd-400f-8aed-fe69efdca3ac"><td class="cell-title"><a href="https://www.notion.so/7ce984a99bfd400f8aedfe69efdca3ac">차종원</a></td><td class="cell-\GB`"><span class="selected-value select-value-color-blue">frontend</span></td><td class="cell-pEbt"><span class="selected-value select-value-color-pink">참여</span></td></tr><tr id="1f03be1e-081e-473e-978f-8d02c37bc142"><td class="cell-title"><a href="https://www.notion.so/1f03be1e081e473e978f8d02c37bc142">박현우</a></td><td class="cell-\GB`"><span class="selected-value select-value-color-blue">frontend</span></td><td class="cell-pEbt"><span class="selected-value select-value-color-pink">참여</span></td></tr><tr id="5cd41f84-9bbd-4249-8958-e9f40303d3e8"><td class="cell-title"><a href="https://www.notion.so/5cd41f849bbd42498958e9f40303d3e8">나연서</a></td><td class="cell-\GB`"><span class="selected-value select-value-color-blue">frontend</span></td><td class="cell-pEbt"><span class="selected-value select-value-color-pink">참여</span></td></tr></tbody></table></div><h3 id="e60fc546-7aa6-41b2-a5d3-7eb86de8737e" class="">담당한 파트</h3><hr id="c1ff3de5-71bd-4ced-88f6-fc7060a51519"/><blockquote id="b27c1c18-ac7b-4c32-b7e7-c3fb013af9cd" class="">Intro, Index페이지 개발, 전체기획, 전체디자인</blockquote><p id="1eedac4d-1eab-44d0-9189-af1eae4f2c0e" class="">
+</p><h3 id="c4ccc9b9-4552-4b03-ab40-122efb0771c9" class=""><strong>사용한 기술 스택</strong></h3><hr id="f05bd129-ae55-4774-8369-5d6bbdd86628"/><div id="ad978430-ae35-4ac6-aae9-f07faa09b7a8" class="column-list"><div id="57d76887-1aed-4531-a10a-92408c62c749" style="width:93.75%" class="column"><ul id="fab4ad8f-16f6-4c65-b3d6-235f277263f7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple"><code>Javascript</code></mark><mark class="highlight-purple">, </mark><code><mark class="highlight-purple">Jquery</mark></code></li></ul><ul id="6f96b748-93b3-4350-9e04-a40ef3ea125d" class="bulleted-list"><li style="list-style-type:disc"><code><mark class="highlight-purple">HTML</mark></code><mark class="highlight-purple">,  </mark><code><mark class="highlight-purple">CSS</mark></code></li></ul><ul id="58d440f1-d2c9-45ef-908f-d66af718387f" class="bulleted-list"><li style="list-style-type:disc"><code><mark class="highlight-purple">Weaher-API</mark></code></li></ul><ul id="d3f584d5-a8b7-4b08-ac5a-2b217d0174e2" class="bulleted-list"><li style="list-style-type:disc"><code><mark class="highlight-purple">ESLint</mark></code><mark class="highlight-purple">, </mark><code><mark class="highlight-purple">Prettier</mark></code><mark class="highlight-purple">, </mark><code><mark class="highlight-purple">Netlify</mark></code><mark class="highlight-purple"> , </mark><code><mark class="highlight-purple">css-compact</mark></code><mark class="highlight-purple"> , </mark><code><mark class="highlight-purple">Tabnine-Ai</mark></code><mark class="highlight-purple"> </mark></li></ul></div><div id="9597a47e-0654-4955-b056-97060c6419ca" style="width:6.25%" class="column"><p id="7be415ef-a530-4e1f-a06e-a99756a35715" class="">
+</p></div></div><h3 id="97870ec7-055e-4053-b5ce-00ea18e97637" class="">내가 만든 기능</h3><hr id="5373e8a0-e503-4614-acf0-2697bd12f728"/><ul id="f9f0fa81-027c-4902-a07d-2e7b2fb0ce57" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><mark class="highlight-red">인트로 페이지</mark></span> open-source 코딩 ( 어떤 홈페이지인지 유저에게 알려주는 역할 )</li></ul><ul id="8b6c12d0-3773-43e6-b609-cc0ffa61dbbe" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><mark class="highlight-pink">검색 페이지</mark></span> ( 유저가 지역을 검색하게끔 유도하는 페이지 )</li></ul><ul id="669bb197-08da-43d9-992a-2f2881aa0e6c" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><mark class="highlight-purple">날씨 및 모달 컴포넌트 페이지</mark></span> ( 여러가지 정보들을 확인할수 있는 페이지 )</li></ul><ul id="bfeaac91-16e6-4b1f-9ae1-ab322d73cf43" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><mark class="highlight-brown">인풋창 검색시 모달들에게 데이터를 줘서</mark></span> 그 데이터에 맞는 정보를 유저에게 전달하는 기능</li></ul><ul id="7d0b1afa-7ca7-4258-9017-6107b93bbc5b" class="bulleted-list"><li style="list-style-type:disc">드론을 호버했을시, 검색한 <mark class="highlight-blue"><span style="border-bottom:0.05em solid">지역의 날씨를 확인할 수 있는 기능 </span></mark></li></ul><ul id="d760e441-aefa-432a-bc4e-6c5cdb4d03a8" class="bulleted-list"><li style="list-style-type:disc">날씨가 흐렸을시, <mark class="highlight-red"><span style="border-bottom:0.05em solid">옷추천 모달창 배경 바꾸는 기능</span></mark></li></ul><ul id="0a115f64-c618-4443-be39-afc6f44c120e" class="bulleted-list"><li style="list-style-type:disc">재접속 유저를 위해서<mark class="highlight-teal"> </mark><mark class="highlight-teal"><span style="border-bottom:0.05em solid">뒤로가기 버튼 생성</span></mark></li></ul><p id="dbb7129d-849d-4c09-9477-c41acd02986a" class="">
+</p><p id="4f016c7d-f414-41be-935d-3a6f63e6dc4c" class="">
+</p><p id="cbc72292-81f8-4de5-a6a1-4ba887d533c4" class="">
+</p><p id="cec7c168-d3ca-4251-a073-739b8ea2fea2" class="">
+</p><p id="2de068bc-464a-4498-a401-d9a558f9389a" class=""><div class="indented"><p id="d53e11d7-1902-4be6-b15c-f2fa6bffcf5e" class="">
+</p></div></p></div></article></body></html>

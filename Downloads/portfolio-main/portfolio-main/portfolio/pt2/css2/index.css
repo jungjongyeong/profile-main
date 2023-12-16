@@ -1,0 +1,49 @@
+
+
+header.index .btn_alram,
+header.index .btn_search,
+header.index .btn_menu { height: 2.5rem; background: no-repeat center / .644rem .694rem;}
+header.index .btn_alram { width: 2.5rem; background-image: url(../images/ico_alram.png);}
+header.index .btn_search { width: 1.466rem; background-image:url(../images/ico_search.png);}
+header.index .btn_menu { width: 1.466rem; background-image:url(../images/ico_menu.png);}
+
+
+/* index */
+.top_nav { padding: 0 1rem;}
+.sub_nav { line-height: 2.33rem;}
+.sub_nav ul { display: flex;}
+.sub_nav ul li { padding: 0 .947rem 0 0;}
+.sub_nav ul a { font-size: .666rem; color:#000;}
+.sub_nav ul a:before { content: ""; display: inline-block; height: .833rem; background: no-repeat left / auto 100%; vertical-align: -2px;}
+.sub_nav ul .ico1:before { width:1.15rem; background-image:url(../images/ico_index_top1.png) ;}
+.sub_nav ul .ico2:before { width:1.4rem; background-image:url(../images/ico_index_top2.png) ;}
+.sub_nav ul .ico3:before {  width:1.15rem; background-image: url(../images/ico_index_top3.png);}
+.top_nav .info { position: relative; padding: .833rem 0 1.233rem;}
+.top_nav .info .btn_info { display: block; padding: .95rem 1.083rem; height: 4.55rem; border-radius: .883rem; border: 1px solid #E3E4E6; box-sizing: border-box; font-size: .633rem; color: #333;}
+.top_nav .info .count { position: absolute; left: 1.083rem; top: 2.983rem; font-size: 1.083rem; }
+.top_nav .info .count span { font-size: .916rem;}
+.top_nav .info .count a { display: inline-block; margin: 0 0 0 .383rem; padding: 0 .316rem;  border: 1px solid #D0D3D6; border-radius: .8rem; line-height: .8rem; font-size: .5rem; color:#333;}
+.top_nav .info .more { position: absolute; right: 0; top: .833rem; width: 2.5rem; height: 3.033rem; background: url(../images/btn_more.png) no-repeat center / .166rem auto;}
+.main_content { background: #F2F3F7; padding:.9rem 1.1rem;}
+.tab_type1 ul { display: flex; justify-content: space-around;}
+.tab_type1 ul button { display: flex; align-items:  flex-start; height: 1.266rem; font-size: .633rem; color:#98999B; background: none;}
+.tab_type1 ul .active button { border-bottom: .083rem solid #000; color:#333;}
+.tab_content ul { display: flex; flex-wrap:wrap; padding: 1.083rem;}
+.tab_content ul li { width: 50%; padding-bottom: 1.2rem; box-sizing: border-box;}
+.tab_content ul li a { display: block; position: relative; padding: .516rem .733rem; height: 6.383rem; border-radius: .883rem; background: transparent linear-gradient(319deg, #FFFFFF 0%, #E8E8E8 100%); box-shadow: -14px -8px 26px #FFFFFFA6, 14px 8px 26px #00000029; color:#000; font-size:.733rem; transition:all .5s;}
+.tab_content ul li:nth-child(2n + 1) { padding-right:.866rem;}
+.tab_content ul li a span { display: block; font-size: .5rem;}
+.tab_content ul li a:after { content: ""; position: absolute; right:.933rem; bottom:.933rem; background: no-repeat center / 100% auto;}
+.tab_content ul li.ico1 a:after { width: 1.833rem; height: 1.613rem; background-image: url(../images/ico_index1_off.png);}
+.tab_content ul li.ico2 a:after { width: 1.366rem; height: 1.466rem; background-image: url(../images/ico_index2_off.png);}
+.tab_content ul li.ico3 a:after { width: 2.833rem; height: 2.6rem; background-image: url(../images/ico_index3_off.png);}
+.tab_content ul li.ico4 a:after { width: 1.483rem; height: 2.233rem; background-image: url(../images/ico_index4_off.png);}
+.tab_content ul li.ico5 a:after { width: 1.983rem; height: 1.55rem; background-image: url(../images/ico_index5_off.png);}
+.tab_content ul li.ico6 a:after { width: 1.616rem; height: 1.616rem; background-image: url(../images/ico_index6_off.png);}
+.tab_content ul li a:hover { background: #239DEE; color:#fff;}
+.tab_content ul li.ico1 a:hover:after { background-image: url(../images/ico_index1_on.png);}
+.tab_content ul li.ico2 a:hover:after { background-image: url(../images/ico_index2_on.png);}
+.tab_content ul li.ico3 a:hover:after { background-image: url(../images/ico_index3_on.png);}
+.tab_content ul li.ico4 a:hover:after { background-image: url(../images/ico_index4_on.png);}
+.tab_content ul li.ico5 a:hover:after { background-image: url(../images/ico_index5_on.png);}
+.tab_content ul li.ico6 a:hover:after { background-image: url(../images/ico_index6_on.png);}

@@ -1,0 +1,91 @@
+/* index */
+header { position:absolute; padding: 43px 0 24px; width: 100%; z-index: 10; height:40px; border-bottom:1px solid #999;}
+header h1 { float: left;}
+header h1 a { width:120px;background:url(../images/ico_footer_logo.png) no-repeat right 5px top 0 / 200px; padding:0 100px 0 0 ; font-size:22px; color:#fff;}
+header h1 a span { font-size:19px; padding:10px 0 0 20px;}
+header .menu .btn_mypage { background-image: url(../images/ico_mypage2.png);}
+header .menu .btn_search {background-image: url(../images/ico_search2.png);}
+header .menu .btn_menu {background-image: url(../images/ico_menu2.png); color:#000;}
+header.fix { position: fixed; width: 100%; background: #fff;  border-bottom:1px solid #999;}
+header.fix  .gnb a { font-size: 23px; color:#000; font-weight: bold;}
+header.fix h1 { float: left;}
+header.fix  h1 a { display: block; width: 140px; height: 50px; background:url(../images/ico_footer_logo.png) no-repeat center / 190px; transform: translateY(-10px);}
+header.fix .gnb { padding:0 0 0 55px;}
+header.fix .sub .gnb { padding:0 0 0 85px}
+header.fix .gnb li { float: left; padding:0 50px 0 0;}
+header.fix  h1 a span { display: none;}
+header.fix  .menu { float: right;}
+header.fix  .menu .btn_mypage { display:inline-block; width: 40px; height: 40px; background: url(../images/ico_mypage2.png) no-repeat center;}
+header.fix  .menu .btn_search { width: 40px; height: 40px; background: url(../images/ico_search2.png) no-repeat center;}
+header.fix  .menu .btn_menu { height: 40px; padding: 0 0 0 37px; background: url(../images/ico_menu2.png) no-repeat left; font-size: 15px; color:#000; font-weight: bold;}
+header.fix  .util { position: absolute; right: 120px; top: 0;}
+header.fix  .util li{ float: left; padding: 0 0 0 20px;}
+header.fix  .util a { display: block; color:#000; font-size: 13px; font-weight: bold; line-height: 48px;}
+
+/* 회원가입 및 로그인 */
+main { padding:50px 0 0;}
+.join { padding: 40px 0; background: #f4f4f4; border-top:1px solid #e4e8eb;}
+.join > div { padding: 40px; margin: 0 auto; width: 640px; background: #fff; box-sizing: border-box;}
+.join select,
+.join input[type="number"],
+.join input[type="email"],
+.join input[type="tel"],
+.join input[type="text"],
+.join input[type="password"] { width: 100%; height: 48px; border: 1px solid #e4e8eb; box-sizing:border-box; text-indent: 12px; font-size: 15px; color:#000;}
+.join input[readonly] { background:#f7f9fa; }
+.join input::placeholder { color:#000;}
+.join .check { position: relative; border: 1px solid #e4e8eb; line-height: 66px;}
+.join .check input { position: absolute; left: -3000%;}
+.join .check input + label { padding: 0 0 0 52px; background:url(../images/ico_check_off.png) no-repeat 22px center;}
+.join .check input:checked + label { background-image:url(../images/ico_check_on.png);}
+.join .check a { position: absolute; right: 0; top: 0; width: 66px; height: 66px; background: url(../images/bu_arrow_right4.png) no-repeat center;}
+.join .check .view { background: none;}
+.join .view { text-decoration: underline; color:#02a2e8; font-size: 13px; text-align: center;}
+.join.agree { margin-bottom: -40px;}
+.join.agree > div > ul { padding: 0 0 56px;}
+.join.agree > div > ul > li ~ li { padding: 24px 0 0;}
+.join.agree .view_list { padding: 17px 0 17px 27px; border: 1px solid #e4e8eb; border-top:none; line-height: 37px; font-size: 13px; color:#000;}
+.join.agree .view_list li { position: relative; padding: 0 0 0 18px; background: url(../images/ico_check_off2.png) no-repeat left;}
+.join.agree .view_list li a { position: absolute; right: 0; top: 0; width: 64px; height: 37px; text-align: center; line-height: 37px;}
+.join.agree .check_list { padding: 0 18px; border: 1px solid #e4e8eb; border-top:none;}
+.join.agree .check_list li { float: left; padding: 0 25px 0 0; line-height: 82px;}
+
+.join.login { padding: 64px 40px 40px;}
+.join.login .password { padding: 24px 0 15px;}
+.join.login .btn { padding: 43px 0 39px;}
+.join.login .btn_type1 { width: 100%;}
+.join.login .login_link { text-align: center; font-size: 0;}
+.join.login .login_link li { display: inline-block; position: relative; padding: 0 14px; line-height: 19px;}
+.join.login .login_link li ~ li:after { content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 12px; border-right:1px solid #dededf;}
+.join.login .login_link li a { font-size: 13px; color:#000;}
+
+.join_tab { position: relative; box-shadow: 0 4px 13px 4px rgba(1,0,0,.1);}
+.join_tab > div { position: relative; margin: 0 auto; width: 1028px; height: 53px; line-height: 53px;}
+.join_tab > div h3 { position: absolute; left: 0; top: 0; font-size: 15px; color:#000;}
+.join_tab > div p { position: absolute; right: 0; top: 0;}
+.join_tab .tab_type1 li a { line-height: 53px;}
+
+.join select,
+.join input[type="number"],
+.join input[type="email"],
+.join input[type="tel"],
+.join input[type="text"],
+.join input[type="password"] { width: 100%; height: 48px; border: 1px solid #e4e8eb; box-sizing:border-box; text-indent: 12px; font-size: 15px; color:#000;}
+.join_table { margin: 0 0 18px;}
+.join_table th { padding: 16px 0 0; vertical-align: top; font-size: 15px; color:#00003f; font-weight: normal; text-align: left; line-height: 1;}
+.join_table th span { color:#f85c00; font-size: 30px; vertical-align: -14px;}
+.join_table td { padding: 0 0 40px;}
+.join_table .list { line-height:28px; font-size:14px; color:#747474; letter-spacing: -0.5px;}
+.join_table .flexnone button { margin: 0 0 0 8px;}
+.join_table .input_list > div ~ div { padding: 12px 0 0;}
+
+
+/* 레이아웃 */
+.flex_layout { display: flex;}
+.flex_layout > div { flex:1;}
+.flex_layout > .flexnone { flex:none;}
+.flex_layout > .flexnone.dash { width: 30px; line-height:48px;  text-align: center;}
+
+.ie9 .flex_layout { display: table; width: 100%;}
+.ie9 .flex_layout > div { display: table-cell;}
+.ie9 .flex_layout .w86 { width:86px;}

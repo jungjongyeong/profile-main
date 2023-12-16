@@ -1,0 +1,120 @@
+body { padding: 0; margin: 0; } 
+ul { margin: 0; } 
+li { list-style-type: none; } 
+a { color: inherit; vertical-align: baseline; text-decoration: none; } 
+.back_home { position:fixed; top: 5%; right:5%; width:50px; height:50px; z-index: 999999999999999999; } 
+.back_home button { border:none; transition: all .3s; } 
+.back_home button:hover { transform: translateX(30%); } 
+.back_home button img { rotate: 180deg; scale: 150%; } 
+
+.back_home .home_btn2 { display: none; } 
+.back_home .home_btn3 { display: none; } 
+.back_home .home_btn3.on { display: block; } 
+/* introClone */
+.introClone { position: fixed; width: 100%; height: 100%; z-index: 999999999; } 
+/* 배경 및 searchForm */
+.back_form { overflow: hidden; position: relative; width: 100%; height: 100%; background:no-repeat center; z-index: 1000; background-size: cover; } 
+.bg-video__content { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; object-fit: cover; } 
+.CITY_description { position: absolute; top: 15px; left: 15px; color: #fff; } 
+.CITY_description > div { display: inline-block; } 
+.CITY_description .current_temp { font-size: 100px; } 
+.CITY_description .city { font-size: 50px; } 
+ .articleModal.on { position: relative; bottom: 0; width: 100%; height: 50%; color: #fff; transform: translateY(100%); } 
+ .articleModal { transform: translateY(1000%); transition: all .8s; } 
+.articleModal ul { display: flex; padding: 0; z-index: 1500; justify-content: center; } 
+.articleModal ul li > div i.fa-magnifying-glass { display: inline-block; width: 50px; height: 50px; color: #fff; font-size: 70px; z-index: 10; } 
+.search_form { height: 66px; z-index: 100; } 
+#data1 { position: relative; width: 60%; height: auto; height: 40px; padding: 0 0.5em; color:#fff; border: 1px soild #fff; border-radius: 5px; background: none; outline: none; padding: 0; margin: 0; border: none; background-color: transparent; } 
+#data1[type="text"] { width: 100%; height: 56px; font-size: 40px; border:none; line-height: 2; } 
+#data1[type="text"]::placeholder { color: #fff; } 
+
+/* 날씨 알려주는 드론 */
+[class*="drone"] img { width:100%; } 
+[class*="drone"] [class*="fan"] { position:absolute; z-index:1; width:50%; } 
+.drone-side { position:absolute; top:20%; left:0%; transform:translate(-50%,-50%); max-width:60px; width:100%; cursor: pointer; } 
+.drone-side .fan01 { top:9%; left:-23.5%; width:60%; } 
+.drone-side .fan02 { top:9%; left:64%; width:60%; } 
+.rotate-side { animation:rotate-side .16s infinite linear; } 
+.upndown { animation:upndown 1s infinite linear alternate; /* animation:upndown 2s infinite linear alternate; */ } 
+.leftright { position:relative; animation:leftright 20s infinite linear; } 
+.leftright .dronimg { position: absolute; width: 240px !important; padding: 31px 0 28px; text-align: center; font-size: 16px; top: -28px; left: -255px; background: url(../img/weather_banner.gif) no-repeat; transition: all .4s; overflow: hidden; } 
+.leftright:hover { animation-play-state: paused;}
+.drone-side:hover .dronimg {    padding: 32px 0 -16px;
+    overflow: hidden;
+    border-radius: 10px;} 
+.dronData { display: none; background-color: rgba(255, 255, 255, 0.2); width:210px; float:right; border-radius: 15px;}
+.drone-side:hover .dronData { display: block;}
+.dronWeather { transform: translateY(-3px);}
+.dron_text { text-align: left;  color:#fff; padding:10px 10px 0px; box-sizing: border-box; line-height: 25px;} 
+.weatherIcon { width:25px !important;  height:25px;}
+@keyframes rotate-side { 
+ 0% { transform: rotateY(0deg); } 
+100% { transform: rotateY(360deg); } 
+ }
+@keyframes upndown { 
+ 0% { margin:0 } 
+ 100% { margin-top:10px } 
+ }
+@keyframes leftright { 
+ 0% { transform:translateX(0); } 
+100% { transform:translateX(2000px); } 
+ }
+
+.tb { display: table; width: 100%; } 
+.td { display: table-cell; vertical-align: middle; } 
+.search_btn { padding: 0; margin: 0; color: #fff; font-family: Nunito; border: none; background-color: transparent; } 
+.search_btn { display: block; position: relative; width: 60px; height: 79px; cursor: pointer; } 
+.search_btn i { display: block; position: absolute; right:0; top:10px; font-size:40px; transition: all 0.1s;} 
+.search_btn i:hover { font-size:45px;}
+#cover { display: none; position: absolute; top: 60%; left:44%; transform: scale(0.6) translateX(-50%); width: 550px; padding: 35px; margin: -83px auto 0 auto; border-radius: 20px; z-index: 99999; transition: all .8s; box-shadow: 0 10px 40px #b0c4de, 0 0 0 20px #ffffffeb; } 
+#cover.on { top:10%; } 
+#s-cover { width: 1px; padding-left: 35px; } 
+
+.text_box { position: absolute; top: 28%; left: 8%; color: #fff; font-size: 3rem; text-align: center; } 
+.text_box.on { display: none; } 
+
+.textAni { color: #fff; font-size: 2.5rem; animation: textAni 0.5s infinite; } 
+@keyframes textAni { to { opacity: 0; } 
+ }
+ .articleModal_ui { display: flex; width:100%; height:100%; justify-content: center; align-items: center; } 
+ .articleModal_ui ul { display: flex; } 
+ .articleModal_ui ul li { display:flex; position:relative; width:100%; width:13vw; height:13vw; color:#000; font-size:25px; overflow: hidden; border-radius: 1.5vw; background:#fff; justify-content:center; align-items:center; margin-right:20px; margin-bottom:20px; transition: all 0.3s; } 
+ .articleModal_ui ul li i { display: flex; align-items: center; justify-content: center; } 
+
+
+
+
+/* Swiper */
+.swiper-container { width: 300px; height: 300px; } 
+.swiper-slide { display: flex; width: 300px; height: 300px; border-radius: 5px; text-align: center; align-items: center; justify-content: center; box-shadow: 0 0 10px silver inset; box-sizing: border-box; } 
+.slider1 { background: url(../img/cloth_img.jfif) no-repeat center; background-size: cover; } 
+.slide_span { display: flex; transform: translateY(-30px); cursor: pointer; } 
+.slide_span span { display: inline-block; position: relative; width: 100%; text-align: center; } 
+.slide_span i.fa-right-to-bracket { display: inline-block; position: absolute; right: 0; transform: translateY(3px); } 
+.slider2 { background: url(../img/food_img.png) no-repeat center; background-size: cover; } 
+.slider3 { background: url(../img/travel.png) no-repeat center; background-size: cover; } 
+.slider4 { background: url(../img/dust_img.png) no-repeat center; background-size: cover; } 
+.swiper-pagination { transform: translateY(50px); } 
+.zoom { width: 100%; height: 100%; cursor: pointer; } 
+
+/* Weather Details */
+.weather { position: absolute; bottom: 0px; left: 50%; width: 80%; height: 41%; padding: 0px 50px; transform: translate(-50%); } 
+.weather h1 { display: block; padding: 0 0 10px; border-bottom: 2px solid #fff; } 
+.weather > div { line-height: 70px; } 
+.imgUrlDiv { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: -1; background-size: cover; } 
+.weather .city { font-size: 15px; } 
+.weather .icon { transform: translateY(-5px); } 
+.weather_text .current_temp { font-size: 15px; } 
+.weather .weather_description { font-size: 13px; } 
+.weather .Temp_right { float: right; } 
+.weather .humidity { float: right; } 
+.weather .wind { float: right; } 
+.weather_text .dust { float: right; font-size: 16px; } 
+.weather .cloud { float: right; } 
+
+/* 모달창 css */
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99; } 
+.modalBackForm { width:100%; height:100%; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); } 
+.modalSanse { position: absolute; top: 50%; left: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%);  } 
+.modalSanse iframe { border-radius: 20px;}
+.modalSanse button { position: absolute; bottom: 0; left: 50%; padding: 5px 10px; color: #fff; background: #000; transform: translateX(-50%); } 

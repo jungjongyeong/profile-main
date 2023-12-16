@@ -1,0 +1,63 @@
+.icon {
+    position: absolute;
+    transform: translateX(18vw) translateY(3vw) translateZ(18vw) rotateX(-90deg);
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 25px;
+    width: 90%;
+    height: 0.6vw;
+    background-color: #DC143C;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(90deg);
+    animation: arrow 700ms linear infinite;
+  }
+  
+  .arrow::after, .arrow::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 0.6vw;
+    right: -8px;
+    background-color: #DC143C;
+  }
+  
+  .arrow::after {
+    top: -0.8vw;
+    transform: rotate(45deg);
+  }
+  
+  .arrow::before {
+    top: 0.8vw;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
+  }
+
+   .main_title {
+    position: absolute;
+    top: 8%; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #e6c51e;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(180,147,0),
+                 1px 1px  0 rgb(130,97,0),
+                 2px 2px 1px rgba(0,0,0,1),
+                 2px 2px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 1024px) {
+    .main_title {
+        font-size: 20px;
+    }
+}

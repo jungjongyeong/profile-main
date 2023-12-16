@@ -1,0 +1,4 @@
+.feedback { position: absolute; left:20px; bottom:100px; list-style: none;}
+.feedback ul { list-style: none;}
+.feedback p { font-size:20px; font-weight: bold;}
+.feedback ul li { color:#333; font-size:18px;}

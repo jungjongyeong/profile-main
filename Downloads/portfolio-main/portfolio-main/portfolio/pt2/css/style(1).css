@@ -1,0 +1,135 @@
+.list2 { background:#F7F7F9; padding:0 1.33rem; }
+.list3 h2 { font-size:0.883; padding:0 0 0.63rem; }
+.list3 li { padding:0 0 0 0.716rem; margin:0.1rem 0 0;line-height: 2.6rem; background:#fff;}
+.list3 li a { font-size:0.75rem; color:#000; display: block; background: url(../images/bu_arrow_right.png) no-repeat right 0.734rem center / 0.216rem auto;}
+.list3 li ~ li { margin:0.1rem 0 0;}
+.list4 h2 { font-size:0.883; padding:0 0 0.63rem; }
+.list4 li { padding:0 0 0 0.716rem; margin:0.1rem 0 0;line-height: 2.6rem; background:#fff; width:50%;}
+.list4 li a { font-size:0.75rem; color:#000; display: block; background: url(../images/bu_arrow_right.png) no-repeat right 0.734rem center / 0.216rem auto;}
+.list4 li ~ li { padding:0.333rem 0 0;}
+.list4 li.col2 { float:left; width:calc(50% - 0.2rem)}
+.list4 li.col2 a { float:left; padding:0 0 0 0.716rem; display: block; width:100%; background: url(../images/bu_arrow_right.png) no-repeat right 1.53rem center / 0.216rem auto;}
+.list4 li.col2:nth-child(add) { float:left;}
+.list4 li.col2:nth-child(even) { float:right;}
+
+.listt { padding: 1.075rem 0 0;}
+.listt nav { border-top:1px solid #E1E1E2; border-left:1px solid #E1E1E2;}
+.listt li { float:left; width:50%;}
+.listt li a img { width:0.483rem; height:0.483rem;}
+.listt li a { display: block; padding:0 0 0 0.733rem; font-size:0.53rem; color:#000;border-bottom:1px solid #E1E1E2; border-right:1px solid #E1E1E2; line-height: 2.03rem}
+
+
+
+.list_type3 { padding:1.06rem 0 0; background:#E6E6E6;}
+.list_type3 ul { padding:0 0 0 3rem;}
+.list_type3 li { float:left; width:50%; text-align: center;padding:0 0 0.533rem;}
+.list_type3 li a { display: block; font-size:0.75rem; color:#000; border:3px solid #B2B2B2; width:7.333rem; line-height:2rem; background:#fff; border-radius: 0.2rem;}
+
+
+.list_type4 { background:#F6F6F6; padding:1.333rem;}
+.list_type4 div { background:#fff; padding: 0 0 0  0.833rem;}
+.list_type4 h2 a { display: inline-block; color:#000; font-weight: bold; font-size:0.75rem; padding:0.6rem 0.516rem 1.06rem 0; background:url(../images/bu_arrow_right.png) no-repeat right center / 0.216rem auto;}
+.list_type4 li { position: relative; border-bottom:1px solid #E7E7E7;}
+.list_type4 li span { float:right; padding:0 0.741rem 0 0; font-size:0.833rem; font-weight: bold;}
+.list_type4 li i { display: block; font-size:0.583rem; color:#8F8F8F; padding:0 0 0.625rem;}
+.list_type4 .list4_ico { position: absolute; right:0.775rem; bottom:0.525rem;}
+.list_type4 .list4_ico b {  border:0.033rem solid #0A7DEA; border-radius: 0.166rem; font-size:0.002rem; color:#0A7DEA; letter-spacing: 0; opacity: 1;}
+
+.list_type5 { padding: 0.666rem 0.8rem;}
+.list_type5 li { position:relative; width:calc(50% - 0.2rem);}
+.list_type5 li img { width:100%; }
+.list_type5 li:nth-child(odd) { float:left;}
+.list_type5 li:nth-child(even) { float:right;}
+.list_type5 li span { display:inline-block; border:0.05rem solid #D1D1D1; padding:0 0.333rem; line-height:0.933rem; font-size:1px; color:#5F5F5F;}
+.list_type5 li b { display:block; color:#5F5F5F; font-size:0.63rem}
+.list_type5 li i {  color:#5F5F5F; font-size:0.75rem}
+.list_type5 li a > div { position: absolute; left:0; top:0; width:1.86rem; height:0.93rem; line-height: :0.93rem;}
+.list_type5 li a > div > p {  font-size:0.1rem; text-align: center; color:#fff;}
+.list_type5 .list5_ico { background:#363636}
+.list_type5 .list5_ico2 { background:#B08A47}
+
+.list_type6 { background:#F5F5F5;padding:0.4rem 0.533rem 0;}
+.list_type6 .list_div { width:100%; height:8rem; border:1px solid #D1D1D1; border-radius: 0.4rem; line-height: 1.333rem}
+.list_type6 li { font-size:0.616rem; color:#262626; }
+.list_type6 li span { float:right; padding:0 1rem 0 0; }
+.list_type6 .type6_line { border-bottom:1px solid #858585; padding:0 0 0.7rem}
+.list_type6 .type7_line { line-height:1; padding:0.533rem 0 0;}
+.list_type6 .list6_btn { margin:0.75rem 0 0; width:18.923rem; height:1.73rem; border-radius:0.86rem; background:#005E5E; text-align: center;}
+.list6_btn span { color:#fff; font-size:0.616rem; }
+
+.list_type7 ul { display: flex; padding:.45rem .666rem 0 .633rem}
+.list_type7 li { position: relative; padding:0  1.05rem 0 .7rem; width:8.183rem; height:6.866rem; background:#fff; border:1px solid #E3E5E4; border-radius: .25rem;}
+.list_type7 li ~ li { margin:0 0 0 10px;}
+.list_type7 li a span { color:#E3E5E4; font-size:.5rem; line-height: 1;}
+.list_type7 li a p { color:#000; font-size:.5rem; padding:.416rem 0 .16rem;}
+.list_type7 li a i { float:left; color:#656565; font-size:.5rem;}
+.list_type7 img { position: absolute; width:1.33rem; height:1.5rem; right:.333rem; bottom:.333rem;}
+
+
+.tab_type1 ul { display: flex; border-bottom:1px solid #E0E0E0;}
+.tab_type1 ul li { flex:1; line-height: 2.608rem; text-align: center;}
+.tab_type1 ul li button { background:none;}
+.tab_type1 ul li button span { display: inline-block; color:#B2B2B2; font-size:0.733rem; }
+.tab_type1 ul .active button span { position: relative; line-height: 2.608rem;  color:#000; }
+.tab_type1 ul .active button span:after { content:""; position: absolute; left:0; bottom:0; right:0; border-bottom:1px solid #000;}
+
+.tab_type3 h2 { padding: 0 .683rem; font-size: .883rem; line-height: 2.45rem;}
+.tab_type3 nav ul { display: flex; position: relative;}
+.tab_type3 nav ul:after { content: ""; position: absolute; left: 0; top: 0; right: 0; height: .133rem; background: linear-gradient(to right, #FE0000, #FE0000 20% , #F79D11 20% , #F79D11 40% ,  #1AAC5B 40%,  #1AAC5B 60%,  #9436D4 60%, #9436D4 80% ,  #0283DF 80%, #0283DF);}
+.tab_type3 nav ul li { flex:1; position:relative;}
+.tab_type3 nav ul li ~ li:after { content: ""; position:absolute; width:1px; height:1.816rem; background:#DEDFE3; left:0; top:50%; transform:translateY(-50%); }
+.tab_type3 nav ul li button { width:100%; height:2.43rem; background:none; border-bottom:1px solid #DEDFE3}
+.tab_type3 nav ul .tab3_li button { border-bottom-color:#0283DF; color:#0283DF;}
+
+.tab_type4 h2 { line-height:3rem;}
+.tab_type4 ul { display: flex; border-bottom:1px solid #DDDDDD}
+.tab_type4 li ~ li { padding: 0 0 0 1rem;}
+.tab_type4 li button { background:none; position: relative; color:#DDDDDD}
+.tab_type4 li button span { line-height:3rem; background:#222; border-radius: 1rem; color:#fff; padding: 0 .4rem; margin:0 0 0 .3rem; }
+.tab_type4 nav li.active button { border-bottom:1px solid #222; color:#222;}
+
+.form1 { padding: 3rem;}
+.form1 input { width:100%; }
+.form1 input[type="text"],
+.form1 input[type="readonly"],
+.form1 input[type="email"] { height:1.916rem; background:#F6F6F6; border:2px solid #E3E3E3; border-radius: 0.166rem; }
+.form1 .flex { display: flex;}
+.form1 .flex > div { flex:1;}
+.form1 .flex .none { flex:none; padding:.2rem .366rem 0 .366rem; }
+
+
+.comment_write > div { display: flex;}
+.comment_write > div > div { flex: 1; position: relative;}
+.comment_write > div > div:first-child > textarea { width:100%; height:4rem; border:1px solid #ddd;}
+.comment_write > div > div:first-child > label { position: absolute; left:4px; top:4px; height:4rem; border-radius: .183rem; font-size:1px; color:#ddd;}
+.comment_write > div > div:last-child > button { display: flex; justify-content: center; padding:2.233rem 0 0; margin: 0 0 0 10px; font-size:.566rem; color:#fff; width:4rem; height:4rem; background:url(../images/ico_list.png) no-repeat center 1.15rem / .921rem 1.045rem #FF7900; }
+.comment_list { border-bottom:2px solid #ddd;}
+.comment_list span {  padding:0 0 8px 15px; background:url(../images/ic_textsms.png) no-repeat left 2px / .733rem .733rem; font-size:1px;  }
+.comment_list span i { color:#FF7900}
+
+.form_type3 .align_justify { display: flex; justify-content: space-between;}
+.form_type3 .align_justify h2 { font-size:10px;}
+.form_type3 .align_justify p { font-size:3px; border-radius: 5px; background:#1BA295; color:#fff; padding:0 10px;}
+.form_type3 .flex { display: flex;}
+.form_type3 .flex div { flex:1; text-align: center;}
+.form_type3 .flex div ~ div { border-left:1px solid #ccc;}
+.form_type3 .flex label { display: block; font-size:1rem; transition: all .4s;width:100%; line-height: 2rem;  border:1px solid #ccc;}
+.form_type3 .flex input:checked + label { background:#1BA295; color:#fff; }
+.form_type3 .select_type1 { position: relative; width:100%; height:2rem; text-align:left; text-indent: 10px; margin:5px 0 0; }
+.form_type3 .select_type1 span { position: absolute;; right:2.5rem; top:50%; transform: translateY(-50%);}
+.form_type3 .select_type2 { width:100%; height:2rem; text-align:left; text-indent: 10px; margin:5px 0 0;}
+.form_type3 .col2 { width:calc(50% - 3px); background:#7B6E66; height:3rem; color:#fff;}
+.form_type3 .col2:nth-child(odd) { float:left}
+.form_type3 .col2:nth-child(even) {float:right}
+.form_type3 .ekarl { width:100%; height:3rem; background:#D7D2CB}
+
+.form_type4 { padding:20px 0 0; border-bottom:1px solid #ddd;}
+.form_type4 li { position: relative;border-top:1px solid #ddd; padding:20px;}
+.form_type4 li input[type="checkbox"] { position: absolute; right:0; top:50%; transform: translateY(-50%); }
+.form_type4 li input[type="checkbox"] + label { position: absolute; width:2.983rem; height:1.35rem; border-radius:.716rem; border:2px solid #ddd; right:0; top:50%; transform: translateY(-50%);}
+.form_type4 li input[type="checkbox"] + label:before { content: ""; position: absolute; left:0; top:50%; transform: translateY(-50%); width:1.116rem; height:1.116rem; border-radius: 1.116rem; background:#B0B0B0; box-shadow: 0px 3px 6px #B0B0B08C;transition: all .4s}
+.form_type4 li input[type="checkbox"] + label:after { content: "OFF"; position: absolute; right:0; top:50%; transform: translateY(-50%); color:#B0B0B0;  font-size:12px; padding:0 4px 0 0;transition: all .4s}
+.form_type4 li input[type="checkbox"]:checked + label:after { content: "ON"; position: absolute; right: 1.566rem; top:50%; transform: translateY(-50%); color:#D85C9C;  font-size:12px;}
+.form_type4 li input[type="checkbox"]:checked + label:before { content: ""; position: absolute; left: 1.716rem; top:50%; transform: translateY(-50%); width:1.116rem; height:1.116rem; border-radius: 1.116rem; background:#D85C9C; box-shadow: 0px 3px 6px #D85C9C8C;}
+.form_type4 li input[type="checkbox"]:checked + label { border-color:#D85C9C;}
+.form_type4 li p { font-size:10px ; padding:10px 0 0;}

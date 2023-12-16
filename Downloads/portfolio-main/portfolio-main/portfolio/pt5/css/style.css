@@ -1,0 +1,50 @@
+/* header */
+header { height:200px; padding:30px 0 0;}
+header .top { position: relative; display: flex; padding:0 0 0 100px;}
+header img { position: absolute; top:-30px; right:0; height:500px;}
+header .top ul { display: flex;}
+header .top .logo { position: absolute; left:100px; top:0; color:#000;}
+header .top .logo p { font-size:12px}
+header .top .logo span { position: relative; font-weight: bold; padding:0 10px 0 0;}
+header .top .logo span:after { content: ""; position: absolute; top:50%; transform: translateY(-50%);background: #fff; width:1px; height:18px; margin:0 0 0 8px;}
+header .top .logo b { font-weight: normal;}
+header .top .topul { position: absolute;padding:0 0 0 250px;z-index: 10}
+header .top .topul li ~ li { margin: 0 0 0 50px; }
+header .top .topul li a:hover { border-bottom:2px solid blue}
+header .top .topul li a { font-size:18px;  color:#000; font-weight: 700; }
+header .top .topul2 { position: absolute; right:150px; top:0;}
+header .top .topul2 li ~ li { margin:0 0 0 20px;}
+header .top .topul2 .login { background: #245dfa; color:#fff;}
+header .top .topul2 .join { background: #fff; color:#000;}
+header .top .topul2 .radius { display: block; width:70px; height:30px;  border-radius: 30px; font-size:15px; font-weight: bold; text-align: center; padding:4px 0 0; box-sizing: border-box;}
+header .top .topul2 .coding { display: block; position: relative;  color:#000; height:50px}
+header .top .topul2 .coding:before { content: ""; position: absolute; width:1px ; height:10px; background: #222; margin:0 20px 0 0; left:-10px; top:20%;}
+header .top .topul2 .topul2_btn { width:50px; height:30px;  background:url(../images/ico_search2.png)no-repeat center;}
+header .main_intro { text-align: center; width:100%; height:120px; color:#fff; background:#3666ba; margin:80px 0 0; line-height: 120px; font-size:30px; font-weight: bold;}
+
+/* ani */
+header .ani2 { display: none;  color:#000; position: fixed; width:100%; height:80px;background: #fff; transform: translateX(-100px) translatey(-30.5px); z-index: 100;}
+header .ani2.ani { display: block; }
+header .ani2 > div { padding:20px 0 0 100px;}
+header .ani2.ani .logo { color:#000; padding:15px 0 0;}
+header .ani2.ani .topul li a { color:#000}
+header .ani2.ani .topul li a:hover { border-bottom:2px solid blue}
+header .ani2.ani .topul2 { padding:22px 0 0;}
+header .ani2.ani .topul2 li a.coding { color:#000;}
+header .ani2.ani .topul2 .topul2_btn { width:50px; height:30px;  background:url(../images/ico_search2.png)no-repeat center / 17px auto;}
+header .top .ani2.ani .topul2 .coding:before { content: ""; position: absolute; width:1px ; height:10px; background: #222; margin:0 20px 0 0; left:-10px; top:20%;}
+
+/* footer */
+footer {width:100%; background: #404040; padding:0 0 50px;}
+.footer {  margin:0 auto; max-width: 1280px; min-width: 1280px;  }
+.footer_1 { padding:15px 0; border-bottom: 1px solid #707070;}
+.footer_1 ul { display: flex; float:left;}
+.footer_1 ul li a { color:#fff; font-size:17px;}
+.footer_1 ul li ~ li { position: relative; margin:0 0 0 30px;}
+.footer_1 ul li ~ li:after {content: ""; position: absolute; left:-15px; top:55%; transform: translateY(-50%); width:1px; height:15px; background:#505050;}
+.footer_1 .ft_btn1 { float:right; background: none;}
+.footer_1 .ft_btn1 a { display: block; width:150px; height:40px; border-radius:50px; border:1px solid #505050; background:url(../images/bu_up.png)no-repeat right 15px top 13px / 12px 8px; color:#fff; line-height: 35px; text-align: left; padding:0 0 0 15px; box-sizing: border-box; font-size:12px;}
+.footer_2 { padding:20px 0 0;}
+.footer_2 h3 { float:left; padding:15px 0 0; color:#a6a6a6; font-size:20px; font-weight: normal;}
+.footer_2 ul {padding:0 0 0 200px;}
+.footer_2 ul li { color:#a6a6a6; font-size:15px;}

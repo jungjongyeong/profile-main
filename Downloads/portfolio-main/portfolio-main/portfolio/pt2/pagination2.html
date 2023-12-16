@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="images/favicon.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
+  <script src="js/sample.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>Document</title>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="swiper-4.5.1/dist/css/swiper.css">
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="backhome">
+    <button>
+      <a href="../../index.html">
+        Home
+      </a>
+    </button>
+  </div>
+  <button class="p_list">
+    Project List
+  </button>
+  <button class="list_img">
+    <a href="../privateproject/pagination.html"><img src="images/logo.png" alt="">만국 여행사</a>
+    <a href="../teamproject/pagination.html"><img src="images/travel_logo.png" alt="">여행 데이터</a>
+    <a href="../pt1/pagination.html"><img src="images/visualA.png" alt="">글로벌
+      오리엔탈</a>
+    <a href="../pt3/pagination4.html"><img src="images/visualD.png" alt="">NC문화재</a>
+    <a href="../pt2/pagination2.html"><img src="images/visualE.png" alt="">Mobile
+      계좌</a>
+    <a href="../pt4/pagination3.html"><img src="images/visualC.png" alt="">삼성선물</a>
+    <a href="../pt5/pagination5.html"><img src="images/visualB.png" alt="">오픈
+      API</a>
+    <a href="../pt6/pagination6.html"><img src="images/visualF.png" alt="">현대이지웰</a>
+  </button>
+  <div class="swiper-container">
+    <div class="iframe" style="transform: translateY(20px);">
+      <button class="if_btn1"><img src="images/pc.png" alt=""><br>pc</button>
+      <button class="if_btn2"><img src="images/tablet.png" alt=""><br>tablet</button>
+      <button class="if_btn3"><img src="images/phone.png" alt="" class="phone_img"><br>phone</button>
+    </div>
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="group">
+          <button class="group_1">home</button>
+          <button class="group_2">추천상품</button>
+          <button class="group_3">예금조회</button>
+          <button class="group_4">메뉴</button>
+
+        </div>
+        <div class="popup_start">
+          <iframe src="./index.html"></iframe>
+        </div>
+        <div class="popup fade1">
+          <iframe src="./sub1.html"></iframe>
+        </div>
+        <div class="popup fade2">
+          <iframe src="./sub2.html"></iframe>
+        </div>
+        <div class="popup fade3">
+          <iframe src="./index(2).html"></iframe>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <iframe src="./list.html"></iframe>
+      </div>
+<!--       <div class="swiper-slide">
+        <iframe src="./feedback.html"></iframe>
+      </div>
+ -->    </div>
+
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="swiper-4.5.1/dist/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      touchRatio: 0,
+    });
+  </script>
+</body>
+
+</html>
